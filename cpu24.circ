@@ -942,19 +942,7 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
     <wire from="(1510,800)" to="(1510,1220)"/>
     <wire from="(690,910)" to="(690,1230)"/>
     <wire from="(1090,1250)" to="(1090,1270)"/>
-    <wire from="(1150,930)" to="(1190,930)"/>
-    <wire from="(1150,900)" to="(1150,930)"/>
-    <wire from="(1150,930)" to="(1150,960)"/>
     <wire from="(1270,840)" to="(1270,900)"/>
-    <wire from="(870,1230)" to="(870,1260)"/>
-    <wire from="(870,1230)" to="(1070,1230)"/>
-    <wire from="(690,1230)" to="(870,1230)"/>
-    <wire from="(1350,800)" to="(1350,880)"/>
-    <wire from="(1340,800)" to="(1350,800)"/>
-    <wire from="(1350,800)" to="(1380,800)"/>
-    <wire from="(1030,720)" to="(1060,720)"/>
-    <wire from="(1060,710)" to="(1060,720)"/>
-    <wire from="(1060,720)" to="(1060,750)"/>
     <wire from="(1180,800)" to="(1200,800)"/>
     <wire from="(940,840)" to="(1040,840)"/>
     <wire from="(1180,820)" to="(1180,900)"/>
@@ -978,9 +966,13 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
     <wire from="(630,740)" to="(740,740)"/>
     <wire from="(900,740)" to="(900,760)"/>
     <wire from="(860,760)" to="(900,760)"/>
-    <wire from="(900,760)" to="(1040,760)"/>
     <wire from="(970,950)" to="(980,950)"/>
     <wire from="(940,950)" to="(950,950)"/>
+    <wire from="(900,760)" to="(1040,760)"/>
+    <wire from="(1060,710)" to="(1060,750)"/>
+    <wire from="(690,1230)" to="(1070,1230)"/>
+    <wire from="(1150,900)" to="(1150,960)"/>
+    <wire from="(1340,800)" to="(1380,800)"/>
     <comp lib="0" loc="(70,110)" name="Tunnel">
       <a name="facing" val="west"/>
       <a name="width" val="1"/>
@@ -1247,14 +1239,6 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
       <a name="bit29" val="none"/>
       <a name="bit30" val="none"/>
       <a name="bit31" val="none"/>
-    </comp>
-    <comp lib="0" loc="(1030,720)" name="Probe">
-      <a name="facing" val="east"/>
-      <a name="radix" val="10signed"/>
-      <a name="label" val=""/>
-      <a name="labelloc" val="north"/>
-      <a name="labelfont" val="Dialog plain 12"/>
-      <a name="labelcolor" val="#000000"/>
     </comp>
     <comp lib="0" loc="(70,130)" name="Tunnel">
       <a name="facing" val="west"/>
@@ -1810,14 +1794,6 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
       <a name="color" val="#000000"/>
       <a name="halign" val="center"/>
       <a name="valign" val="base"/>
-    </comp>
-    <comp lib="0" loc="(1190,930)" name="Probe">
-      <a name="facing" val="west"/>
-      <a name="radix" val="16"/>
-      <a name="label" val=""/>
-      <a name="labelloc" val="north"/>
-      <a name="labelfont" val="Dialog plain 12"/>
-      <a name="labelcolor" val="#000000"/>
     </comp>
     <comp lib="5" loc="(400,80)" name="Hex Digit Display">
       <a name="color" val="#f00000"/>
@@ -2425,14 +2401,6 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
       <a name="bus" val="separate"/>
       <a name="Select" val="high"/>
     </comp>
-    <comp lib="0" loc="(1350,880)" name="Probe">
-      <a name="facing" val="north"/>
-      <a name="radix" val="16"/>
-      <a name="label" val=""/>
-      <a name="labelloc" val="north"/>
-      <a name="labelfont" val="Dialog plain 12"/>
-      <a name="labelcolor" val="#000000"/>
-    </comp>
     <comp lib="0" loc="(880,130)" name="Pin">
       <a name="facing" val="east"/>
       <a name="output" val="false"/>
@@ -2800,7 +2768,9 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
       <a name="labelfont" val="Dialog plain 12"/>
       <a name="labelcolor" val="#000000"/>
       <a name="contents">addr/data: 10 32
-2011000f 112020 20020022 c 2231ffff 1e20fffb 2002000a c
+20080001 20090003 20110876 118d00 112020 20020022 c 200b0008
+1118807 1318807 112020 20020022 c 216bffff 1560fff9 2002000a
+c
 </a>
       <a name="Select" val="high"/>
     </comp>
@@ -2894,14 +2864,6 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
       <a name="width" val="1"/>
       <a name="label" val="CLK"/>
       <a name="labelfont" val="Dialog plain 12"/>
-    </comp>
-    <comp lib="0" loc="(870,1260)" name="Probe">
-      <a name="facing" val="north"/>
-      <a name="radix" val="16"/>
-      <a name="label" val=""/>
-      <a name="labelloc" val="north"/>
-      <a name="labelfont" val="Dialog plain 12"/>
-      <a name="labelcolor" val="#000000"/>
     </comp>
     <comp lib="2" loc="(1470,800)" name="Multiplexer">
       <a name="facing" val="east"/>
