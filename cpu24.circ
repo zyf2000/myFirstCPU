@@ -13726,38 +13726,6 @@ c
     <wire from="(1960,1020)" to="(2110,1020)"/>
     <wire from="(2110,1000)" to="(2110,1020)"/>
     <wire from="(2110,1020)" to="(2110,1030)"/>
-    <wire from="(1330,970)" to="(1330,990)"/>
-    <wire from="(1280,990)" to="(1330,990)"/>
-    <wire from="(1330,990)" to="(1400,990)"/>
-    <wire from="(1510,970)" to="(1510,990)"/>
-    <wire from="(1510,990)" to="(1570,990)"/>
-    <wire from="(1430,990)" to="(1510,990)"/>
-    <wire from="(1850,1050)" to="(1850,1060)"/>
-    <wire from="(1570,1060)" to="(1850,1060)"/>
-    <wire from="(1850,1060)" to="(1900,1060)"/>
-    <wire from="(1500,1070)" to="(1500,1140)"/>
-    <wire from="(1500,1140)" to="(1580,1140)"/>
-    <wire from="(1430,1140)" to="(1500,1140)"/>
-    <wire from="(1860,960)" to="(1900,960)"/>
-    <wire from="(1800,960)" to="(1860,960)"/>
-    <wire from="(1850,930)" to="(1850,940)"/>
-    <wire from="(1860,940)" to="(1860,960)"/>
-    <wire from="(1850,940)" to="(1860,940)"/>
-    <wire from="(1340,1060)" to="(1340,1140)"/>
-    <wire from="(1340,1140)" to="(1400,1140)"/>
-    <wire from="(1220,1140)" to="(1340,1140)"/>
-    <wire from="(1140,1490)" to="(1260,1490)"/>
-    <wire from="(1140,1490)" to="(1140,1670)"/>
-    <wire from="(1140,1030)" to="(1140,1490)"/>
-    <wire from="(1170,1430)" to="(1260,1430)"/>
-    <wire from="(1170,1430)" to="(1170,1560)"/>
-    <wire from="(1170,1010)" to="(1170,1430)"/>
-    <wire from="(1260,1340)" to="(1260,1370)"/>
-    <wire from="(1120,1340)" to="(1260,1340)"/>
-    <wire from="(1260,1340)" to="(1400,1340)"/>
-    <wire from="(1530,1340)" to="(1530,1360)"/>
-    <wire from="(1530,1340)" to="(1900,1340)"/>
-    <wire from="(1430,1340)" to="(1530,1340)"/>
     <wire from="(1600,920)" to="(1740,920)"/>
     <wire from="(1380,850)" to="(1400,850)"/>
     <wire from="(1850,830)" to="(1850,850)"/>
@@ -13797,9 +13765,19 @@ c
     <wire from="(1930,810)" to="(2050,810)"/>
     <wire from="(2050,810)" to="(2330,810)"/>
     <wire from="(1780,910)" to="(1780,920)"/>
-    <wire from="(1000,10)" to="(1000,160)"/>
     <wire from="(1790,810)" to="(1790,870)"/>
     <wire from="(1600,870)" to="(1790,870)"/>
+    <wire from="(1280,990)" to="(1400,990)"/>
+    <wire from="(1430,990)" to="(1570,990)"/>
+    <wire from="(1430,1140)" to="(1580,1140)"/>
+    <wire from="(1220,1140)" to="(1400,1140)"/>
+    <wire from="(1800,960)" to="(1900,960)"/>
+    <wire from="(1570,1060)" to="(1900,1060)"/>
+    <wire from="(1140,1030)" to="(1140,1670)"/>
+    <wire from="(1170,1010)" to="(1170,1560)"/>
+    <wire from="(1120,1340)" to="(1400,1340)"/>
+    <wire from="(1000,10)" to="(1000,160)"/>
+    <wire from="(1430,1340)" to="(1900,1340)"/>
     <wire from="(1000,10)" to="(1000,160)"/>
     <comp loc="(1930,750)" name="◆理想流水接口EX/MEM">
       <a name="facing" val="east"/>
@@ -14636,14 +14614,6 @@ c
       <a name="label" val="IR3"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="0" loc="(1850,930)" name="Probe">
-      <a name="facing" val="south"/>
-      <a name="radix" val="10signed"/>
-      <a name="label" val=""/>
-      <a name="labelloc" val="north"/>
-      <a name="labelfont" val="Dialog plain 12"/>
-      <a name="labelcolor" val="#000000"/>
-    </comp>
     <comp lib="0" loc="(1960,1300)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="width" val="32"/>
@@ -14691,14 +14661,6 @@ c
       <a name="width" val="1"/>
       <a name="label" val="RegDst"/>
       <a name="labelfont" val="Dialog plain 12"/>
-    </comp>
-    <comp lib="0" loc="(1500,1070)" name="Probe">
-      <a name="facing" val="south"/>
-      <a name="radix" val="10signed"/>
-      <a name="label" val=""/>
-      <a name="labelloc" val="north"/>
-      <a name="labelfont" val="Dialog plain 12"/>
-      <a name="labelcolor" val="#000000"/>
     </comp>
     <comp lib="0" loc="(210,400)" name="Tunnel">
       <a name="facing" val="west"/>
@@ -14779,14 +14741,6 @@ c
       <a name="bit29" val="none"/>
       <a name="bit30" val="none"/>
       <a name="bit31" val="none"/>
-    </comp>
-    <comp lib="0" loc="(1850,1050)" name="Probe">
-      <a name="facing" val="south"/>
-      <a name="radix" val="10signed"/>
-      <a name="label" val=""/>
-      <a name="labelloc" val="north"/>
-      <a name="labelfont" val="Dialog plain 12"/>
-      <a name="labelcolor" val="#000000"/>
     </comp>
     <comp lib="0" loc="(2000,1120)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -14979,14 +14933,6 @@ c
       <a name="tristate" val="true"/>
       <a name="pull" val="none"/>
       <a name="label" val="WB.PC"/>
-      <a name="labelloc" val="north"/>
-      <a name="labelfont" val="Dialog plain 12"/>
-      <a name="labelcolor" val="#000000"/>
-    </comp>
-    <comp lib="0" loc="(1260,1430)" name="Probe">
-      <a name="facing" val="west"/>
-      <a name="radix" val="10signed"/>
-      <a name="label" val=""/>
       <a name="labelloc" val="north"/>
       <a name="labelfont" val="Dialog plain 12"/>
       <a name="labelcolor" val="#000000"/>
@@ -15236,14 +15182,6 @@ c
       <a name="bit30" val="none"/>
       <a name="bit31" val="none"/>
     </comp>
-    <comp lib="0" loc="(1340,1060)" name="Probe">
-      <a name="facing" val="south"/>
-      <a name="radix" val="10signed"/>
-      <a name="label" val=""/>
-      <a name="labelloc" val="north"/>
-      <a name="labelfont" val="Dialog plain 12"/>
-      <a name="labelcolor" val="#000000"/>
-    </comp>
     <comp lib="0" loc="(1090,590)" name="Tunnel">
       <a name="facing" val="west"/>
       <a name="width" val="1"/>
@@ -15462,14 +15400,6 @@ c
       <a name="bit29" val="none"/>
       <a name="bit30" val="none"/>
       <a name="bit31" val="none"/>
-    </comp>
-    <comp lib="0" loc="(1530,1360)" name="Probe">
-      <a name="facing" val="north"/>
-      <a name="radix" val="10signed"/>
-      <a name="label" val=""/>
-      <a name="labelloc" val="north"/>
-      <a name="labelfont" val="Dialog plain 12"/>
-      <a name="labelcolor" val="#000000"/>
     </comp>
     <comp lib="0" loc="(130,220)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -15768,14 +15698,6 @@ c
       <a name="label" val="EX.PC"/>
       <a name="labelfont" val="SansSerif plain 10"/>
     </comp>
-    <comp lib="0" loc="(1260,1370)" name="Probe">
-      <a name="facing" val="north"/>
-      <a name="radix" val="10signed"/>
-      <a name="label" val=""/>
-      <a name="labelloc" val="north"/>
-      <a name="labelfont" val="Dialog plain 12"/>
-      <a name="labelcolor" val="#000000"/>
-    </comp>
     <comp lib="0" loc="(970,1340)" name="Splitter">
       <a name="facing" val="east"/>
       <a name="fanout" val="1"/>
@@ -15851,14 +15773,6 @@ c
       <a name="bit29" val="none"/>
       <a name="bit30" val="none"/>
       <a name="bit31" val="none"/>
-    </comp>
-    <comp lib="0" loc="(1260,1490)" name="Probe">
-      <a name="facing" val="west"/>
-      <a name="radix" val="10signed"/>
-      <a name="label" val=""/>
-      <a name="labelloc" val="north"/>
-      <a name="labelfont" val="Dialog plain 12"/>
-      <a name="labelcolor" val="#000000"/>
     </comp>
     <comp lib="0" loc="(2660,630)" name="Tunnel">
       <a name="facing" val="west"/>
@@ -16376,14 +16290,6 @@ c
       <a name="label" val="ID.PC"/>
       <a name="labelfont" val="SansSerif plain 10"/>
     </comp>
-    <comp lib="0" loc="(1330,970)" name="Probe">
-      <a name="facing" val="south"/>
-      <a name="radix" val="10signed"/>
-      <a name="label" val=""/>
-      <a name="labelloc" val="north"/>
-      <a name="labelfont" val="Dialog plain 12"/>
-      <a name="labelcolor" val="#000000"/>
-    </comp>
     <comp lib="0" loc="(1220,1180)" name="Tunnel">
       <a name="facing" val="west"/>
       <a name="width" val="1"/>
@@ -16491,14 +16397,6 @@ c
     <comp lib="3" loc="(1010,250)" name="Comparator">
       <a name="width" val="13"/>
       <a name="mode" val="twosComplement"/>
-    </comp>
-    <comp lib="0" loc="(1510,970)" name="Probe">
-      <a name="facing" val="south"/>
-      <a name="radix" val="10signed"/>
-      <a name="label" val=""/>
-      <a name="labelloc" val="north"/>
-      <a name="labelfont" val="Dialog plain 12"/>
-      <a name="labelcolor" val="#000000"/>
     </comp>
     <comp lib="6" loc="(990,1074)" name="Text">
       <a name="text" val="shamt"/>
@@ -22870,5 +22768,19 @@ c
       <a name="labelfont" val="Dialog plain 12"/>
       <a name="labelcolor" val="#000000"/>
     </comp>
+  </circuit>
+  <circuit name="◇源寄存器使用情况">
+    <a name="circuit" val="◇源寄存器使用情况"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="Dialog plain 12"/>
+    <a name="clabelcolor" val="#000000"/>
+  </circuit>
+  <circuit name="◇数据相关检测">
+    <a name="circuit" val="◇数据相关检测"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="Dialog plain 12"/>
+    <a name="clabelcolor" val="#000000"/>
   </circuit>
 </project>
