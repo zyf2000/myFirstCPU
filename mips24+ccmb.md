@@ -2,7 +2,9 @@
 
 ## MIPS24
 
-### ADD
+### SLL
+
+
 
 ## CMBB
 
