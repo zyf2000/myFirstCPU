@@ -28744,7 +28744,6 @@ afb60000 23bd0004 20160002 20140003 20150001 168020 108100 2149825
     <wire from="(2160,520)" to="(2200,520)"/>
     <wire from="(1570,740)" to="(1600,740)"/>
     <wire from="(1550,730)" to="(1570,730)"/>
-    <wire from="(480,800)" to="(480,880)"/>
     <wire from="(180,600)" to="(210,600)"/>
     <wire from="(250,610)" to="(270,610)"/>
     <wire from="(170,620)" to="(210,620)"/>
@@ -28773,7 +28772,12 @@ afb60000 23bd0004 20160002 20140003 20150001 168020 108100 2149825
     <wire from="(270,1390)" to="(270,1440)"/>
     <wire from="(180,1420)" to="(250,1420)"/>
     <wire from="(250,1390)" to="(250,1420)"/>
-    <wire from="(280,1290)" to="(320,1290)"/>
+    <wire from="(420,870)" to="(480,870)"/>
+    <wire from="(480,800)" to="(480,870)"/>
+    <wire from="(480,870)" to="(480,880)"/>
+    <wire from="(310,1290)" to="(310,1330)"/>
+    <wire from="(310,1290)" to="(320,1290)"/>
+    <wire from="(280,1290)" to="(310,1290)"/>
     <comp lib="1" loc="(270,460)" name="OR Gate">
       <a name="facing" val="east"/>
       <a name="width" val="1"/>
@@ -28872,7 +28876,7 @@ afb60000 23bd0004 20160002 20140003 20150001 168020 108100 2149825
     <comp lib="0" loc="(480,730)" name="Constant">
       <a name="facing" val="south"/>
       <a name="width" val="32"/>
-      <a name="value" val="0x3150"/>
+      <a name="value" val="0x3158"/>
     </comp>
     <comp lib="0" loc="(2120,740)" name="Probe">
       <a name="facing" val="south"/>
@@ -29538,7 +29542,7 @@ afb60000 23bd0004 20160002 20140003 20150001 168020 108100 2149825
     <comp lib="0" loc="(580,300)" name="Constant">
       <a name="facing" val="north"/>
       <a name="width" val="13"/>
-      <a name="value" val="0x368"/>
+      <a name="value" val="0x10"/>
     </comp>
     <comp lib="0" loc="(160,1310)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -29731,6 +29735,14 @@ afb60000 23bd0004 20160002 20140003 20150001 168020 108100 2149825
       <a name="width" val="8"/>
       <a name="disabled" val="Z"/>
       <a name="enable" val="false"/>
+    </comp>
+    <comp lib="0" loc="(310,1330)" name="Probe">
+      <a name="facing" val="north"/>
+      <a name="radix" val="16"/>
+      <a name="label" val=""/>
+      <a name="labelloc" val="north"/>
+      <a name="labelfont" val="Dialog plain 12"/>
+      <a name="labelcolor" val="#000000"/>
     </comp>
     <comp lib="0" loc="(1740,1050)" name="Tunnel">
       <a name="facing" val="west"/>
@@ -30380,7 +30392,7 @@ afb60000 23bd0004 20160002 20140003 20150001 168020 108100 2149825
     <comp lib="0" loc="(490,710)" name="Constant">
       <a name="facing" val="south"/>
       <a name="width" val="32"/>
-      <a name="value" val="0x31f4"/>
+      <a name="value" val="0x3204"/>
     </comp>
     <comp lib="2" loc="(480,800)" name="Multiplexer">
       <a name="facing" val="south"/>
@@ -31152,6 +31164,14 @@ c 1600fffa 295a022 1680fff7 40800000 23bdfffc 8fb60000 23bdfffc
       <a name="labelcolor" val="#000000"/>
       <a name="negate0" val="false"/>
       <a name="negate1" val="false"/>
+    </comp>
+    <comp lib="0" loc="(420,870)" name="Probe">
+      <a name="facing" val="east"/>
+      <a name="radix" val="16"/>
+      <a name="label" val=""/>
+      <a name="labelloc" val="north"/>
+      <a name="labelfont" val="Dialog plain 12"/>
+      <a name="labelcolor" val="#000000"/>
     </comp>
     <comp lib="2" loc="(1900,870)" name="Multiplexer">
       <a name="facing" val="east"/>
