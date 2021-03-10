@@ -10,9 +10,7 @@ module MIPS_CPU( Go,
                  LOGISIM_CLOCK_TREE_0,
                  RST,
                  NA,
-                 SEG,
-                 fpgadigit_1,
-                 fpgadigit_2);
+                 SEG);
 
    /***************************************************************************
     ** Here the inputs are defined                                           **
@@ -26,8 +24,6 @@ module MIPS_CPU( Go,
     ***************************************************************************/
    output[7:0] NA;
    output[7:0] SEG;
-   output[7:0] fpgadigit_1;
-   output[7:0] fpgadigit_2;
 
    /***************************************************************************
     ** Here the internal wires are defined                                   **
@@ -186,7 +182,6 @@ module MIPS_CPU( Go,
     ***************************************************************************/
    assign NA                                 = s_LOGISIM_BUS_67[7:0];
    assign SEG                                = s_LOGISIM_BUS_43[7:0];
-   assign                                    = s_LOGISIM_BUS_58[31:0];
 
    /***************************************************************************
     ** Here all in-lined components are defined                              **
@@ -506,10 +501,10 @@ module MIPS_CPU( Go,
                                        .Din(s_LOGISIM_BUS_1[31:0]),
                                        .LOGISIM_CLOCK_TREE_0(LOGISIM_CLOCK_TREE_0),
                                        .R1(s_LOGISIM_BUS_86[31:0]),
+                                       .R1Adr(s_LOGISIM_BUS_31[4:0]),
                                        .R2(s_LOGISIM_BUS_4[31:0]),
-                                       .RS(s_LOGISIM_BUS_31[4:0]),
-                                       .RT(s_LOGISIM_BUS_41[4:0]),
-                                       .WD(s_LOGISIM_BUS_72[4:0]),
+                                       .R2Adr(s_LOGISIM_BUS_41[4:0]),
+                                       .WAdr(s_LOGISIM_BUS_72[4:0]),
                                        .WE(s_LOGISIM_NET_20));
 
 

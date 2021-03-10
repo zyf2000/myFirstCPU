@@ -54,7 +54,7 @@ module LogisimToplevelShell( FPGA_GlobalClock,
     ** Here the clock tree components are defined                            **
     ***************************************************************************/
    LogisimTickGenerator #(.NrOfBits(32),
-                          .ReloadValue(50000))
+                          .ReloadValue(200000))
       LogisimTickGenerator_0 (.FPGAClock(FPGA_GlobalClock),
                               .FPGATick(s_FPGA_Tick));
 
@@ -69,8 +69,7 @@ module LogisimToplevelShell( FPGA_GlobalClock,
    /***************************************************************************
     ** Here the toplevel component is connected                              **
     ***************************************************************************/
-   MIPS_CPU      MIPS_CPU_0 (.(s_),
-                             .Go(s_Go),
+   MIPS_CPU      MIPS_CPU_0 (.Go(s_Go),
                              .LOGISIM_CLOCK_TREE_0(s_LOGISIM_CLOCK_TREE_0),
                              .NA(s_NA),
                              .RST(s_RST),

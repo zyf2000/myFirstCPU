@@ -1001,7 +1001,7 @@ module ALU_Signal( F0,
                 .Input_2(s_LOGISIM_NET_126),
                 .Input_3(s_LOGISIM_NET_111),
                 .Input_4(s_LOGISIM_NET_284),
-                .Input_5(s_LOGISIM_NET_223),
+                .Input_5(s_LOGISIM_NET_222),
                 .Input_6(s_LOGISIM_NET_238),
                 .Input_7(s_LOGISIM_NET_40),
                 .Input_8(s_LOGISIM_NET_156),
@@ -1045,7 +1045,7 @@ module ALU_Signal( F0,
                            .Result(s_LOGISIM_NET_314));
 
    NOT_GATE      GATE_148 (.Input_1(s_LOGISIM_NET_26),
-                           .Result(s_LOGISIM_NET_222));
+                           .Result(s_LOGISIM_NET_223));
 
    NOT_GATE      GATE_149 (.Input_1(s_LOGISIM_NET_58),
                            .Result(s_LOGISIM_NET_286));
@@ -1281,7 +1281,7 @@ module ALU_Signal( F0,
                            .Result(s_LOGISIM_NET_56));
 
    NOT_GATE      GATE_203 (.Input_1(s_LOGISIM_NET_3),
-                           .Result(s_LOGISIM_NET_223));
+                           .Result(s_LOGISIM_NET_222));
 
    NOT_GATE      GATE_204 (.Input_1(s_LOGISIM_NET_57),
                            .Result(s_LOGISIM_NET_8));
@@ -1401,7 +1401,7 @@ module ALU_Signal( F0,
       GATE_234 (.Input_1(s_LOGISIM_NET_11),
                 .Input_2(s_LOGISIM_NET_217),
                 .Input_3(s_LOGISIM_NET_317),
-                .Input_4(s_LOGISIM_NET_222),
+                .Input_4(s_LOGISIM_NET_223),
                 .Input_5(s_LOGISIM_NET_3),
                 .Input_6(s_LOGISIM_NET_58),
                 .Result(s_LOGISIM_NET_265));

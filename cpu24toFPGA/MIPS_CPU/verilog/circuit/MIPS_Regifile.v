@@ -9,9 +9,9 @@
 module MIPS_Regifile( Clk,
                       Din,
                       LOGISIM_CLOCK_TREE_0,
-                      RS,
-                      RT,
-                      WD,
+                      R1Adr,
+                      R2Adr,
+                      WAdr,
                       WE,
                       R1,
                       R2);
@@ -22,9 +22,9 @@ module MIPS_Regifile( Clk,
    input  Clk;
    input[31:0]  Din;
    input[4:0]  LOGISIM_CLOCK_TREE_0;
-   input[4:0]  RS;
-   input[4:0]  RT;
-   input[4:0]  WD;
+   input[4:0]  R1Adr;
+   input[4:0]  R2Adr;
+   input[4:0]  WAdr;
    input  WE;
 
    /***************************************************************************

@@ -12665,7 +12665,7 @@ c 22100007 102020 20020022 c 22100008 102020 20020022
       <a name="width" val="5"/>
       <a name="tristate" val="false"/>
       <a name="pull" val="none"/>
-      <a name="label" val="RS"/>
+      <a name="label" val="R1Adr"/>
       <a name="labelloc" val="north"/>
       <a name="labelfont" val="Dialog plain 12"/>
       <a name="labelcolor" val="#000000"/>
@@ -12690,7 +12690,7 @@ c 22100007 102020 20020022 c 22100008 102020 20020022
       <a name="width" val="5"/>
       <a name="tristate" val="false"/>
       <a name="pull" val="none"/>
-      <a name="label" val="RT"/>
+      <a name="label" val="R2Adr"/>
       <a name="labelloc" val="north"/>
       <a name="labelfont" val="Dialog plain 12"/>
       <a name="labelcolor" val="#000000"/>
@@ -12734,7 +12734,7 @@ c 22100007 102020 20020022 c 22100008 102020 20020022
       <a name="width" val="5"/>
       <a name="tristate" val="false"/>
       <a name="pull" val="none"/>
-      <a name="label" val="WD"/>
+      <a name="label" val="WAdr"/>
       <a name="labelloc" val="north"/>
       <a name="labelfont" val="Dialog plain 12"/>
       <a name="labelcolor" val="#000000"/>
