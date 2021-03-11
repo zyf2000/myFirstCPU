@@ -79,50 +79,32 @@ module Control( Func,
    /***************************************************************************
     ** Here all input connections are defined                                **
     ***************************************************************************/
-   assign s_LOGISIM_BUS_40[5:0]              = OP;
    assign s_LOGISIM_BUS_38[5:0]              = Func;
+   assign s_LOGISIM_BUS_40[5:0]              = OP;
 
    /***************************************************************************
     ** Here all output connections are defined                               **
     ***************************************************************************/
-   assign RegWrite                           = s_LOGISIM_NET_39;
-   assign LB                                 = s_LOGISIM_NET_43;
-   assign BLTZ                               = s_LOGISIM_NET_22;
-   assign ALU_OP                             = s_LOGISIM_BUS_37[3:0];
+   assign RegDst                             = s_LOGISIM_NET_21;
    assign MemToReg                           = s_LOGISIM_NET_15;
+   assign SysCALL                            = s_LOGISIM_NET_18;
+   assign ALU_OP                             = s_LOGISIM_BUS_37[3:0];
+   assign BLTZ                               = s_LOGISIM_NET_22;
    assign SignedExt                          = s_LOGISIM_NET_45;
    assign JMP                                = s_LOGISIM_NET_14;
-   assign MemWrite                           = s_LOGISIM_NET_20;
-   assign SRAV                               = s_LOGISIM_NET_35;
-   assign Bne                                = s_LOGISIM_NET_44;
-   assign SysCALL                            = s_LOGISIM_NET_18;
-   assign ALU_SRC                            = s_LOGISIM_NET_0;
-   assign RegDst                             = s_LOGISIM_NET_21;
+   assign RegWrite                           = s_LOGISIM_NET_39;
    assign Beq                                = s_LOGISIM_NET_36;
+   assign LB                                 = s_LOGISIM_NET_43;
    assign JAL                                = s_LOGISIM_NET_19;
+   assign Bne                                = s_LOGISIM_NET_44;
+   assign MemWrite                           = s_LOGISIM_NET_20;
+   assign ALU_SRC                            = s_LOGISIM_NET_0;
+   assign SRAV                               = s_LOGISIM_NET_35;
    assign JR                                 = s_LOGISIM_NET_1;
 
    /***************************************************************************
     ** Here all sub-circuits are defined                                     **
     ***************************************************************************/
-   ALU_Signal      ALU_Signal_1 (.F0(s_LOGISIM_BUS_38[0]),
-                                 .F1(s_LOGISIM_BUS_38[1]),
-                                 .F2(s_LOGISIM_BUS_38[2]),
-                                 .F3(s_LOGISIM_BUS_38[3]),
-                                 .F4(s_LOGISIM_BUS_38[4]),
-                                 .F5(s_LOGISIM_BUS_38[5]),
-                                 .LOGISIM_CLOCK_TREE_0(LOGISIM_CLOCK_TREE_0),
-                                 .OP0(s_LOGISIM_BUS_40[0]),
-                                 .OP1(s_LOGISIM_BUS_40[1]),
-                                 .OP2(s_LOGISIM_BUS_40[2]),
-                                 .OP3(s_LOGISIM_BUS_40[3]),
-                                 .OP4(s_LOGISIM_BUS_40[4]),
-                                 .OP5(s_LOGISIM_BUS_40[5]),
-                                 .S0(s_LOGISIM_BUS_37[0]),
-                                 .S1(s_LOGISIM_BUS_37[1]),
-                                 .S2(s_LOGISIM_BUS_37[2]),
-                                 .S3(s_LOGISIM_BUS_37[3]));
-
    Control_Signal      Control_Signal_1 (.ALU_SRC(s_LOGISIM_NET_0),
                                          .BEQ(s_LOGISIM_NET_36),
                                          .BLTZ(s_LOGISIM_NET_22),
@@ -151,6 +133,24 @@ module Control( Func,
                                          .SRAV(s_LOGISIM_NET_35),
                                          .SignedExt(s_LOGISIM_NET_45),
                                          .SysCALL(s_LOGISIM_NET_18));
+
+   ALU_Signal      ALU_Signal_1 (.F0(s_LOGISIM_BUS_38[0]),
+                                 .F1(s_LOGISIM_BUS_38[1]),
+                                 .F2(s_LOGISIM_BUS_38[2]),
+                                 .F3(s_LOGISIM_BUS_38[3]),
+                                 .F4(s_LOGISIM_BUS_38[4]),
+                                 .F5(s_LOGISIM_BUS_38[5]),
+                                 .LOGISIM_CLOCK_TREE_0(LOGISIM_CLOCK_TREE_0),
+                                 .OP0(s_LOGISIM_BUS_40[0]),
+                                 .OP1(s_LOGISIM_BUS_40[1]),
+                                 .OP2(s_LOGISIM_BUS_40[2]),
+                                 .OP3(s_LOGISIM_BUS_40[3]),
+                                 .OP4(s_LOGISIM_BUS_40[4]),
+                                 .OP5(s_LOGISIM_BUS_40[5]),
+                                 .S0(s_LOGISIM_BUS_37[0]),
+                                 .S1(s_LOGISIM_BUS_37[1]),
+                                 .S2(s_LOGISIM_BUS_37[2]),
+                                 .S3(s_LOGISIM_BUS_37[3]));
 
 
 

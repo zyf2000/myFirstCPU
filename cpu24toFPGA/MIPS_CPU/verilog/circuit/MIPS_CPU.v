@@ -10,7 +10,9 @@ module MIPS_CPU( Go,
                  LOGISIM_CLOCK_TREE_0,
                  RST,
                  NA,
-                 SEG);
+                 SEG,
+                 fpgadigit_1,
+                 fpgadigit_2);
 
    /***************************************************************************
     ** Here the inputs are defined                                           **
@@ -24,6 +26,8 @@ module MIPS_CPU( Go,
     ***************************************************************************/
    output[7:0] NA;
    output[7:0] SEG;
+   output[7:0] fpgadigit_1;
+   output[7:0] fpgadigit_2;
 
    /***************************************************************************
     ** Here the internal wires are defined                                   **
@@ -107,7 +111,7 @@ module MIPS_CPU( Go,
    wire s_LOGISIM_NET_84;
    wire s_LOGISIM_NET_85;
    wire s_LOGISIM_NET_88;
-   wire s_LOGISIM_NET_91;
+   wire s_LOGISIM_NET_95;
 
 
    /***************************************************************************
@@ -180,12 +184,16 @@ module MIPS_CPU( Go,
    /***************************************************************************
     ** Here all output connections are defined                               **
     ***************************************************************************/
-   assign NA                                 = s_LOGISIM_BUS_67[7:0];
    assign SEG                                = s_LOGISIM_BUS_43[7:0];
+   assign NA                                 = s_LOGISIM_BUS_67[7:0];
 
    /***************************************************************************
     ** Here all in-lined components are defined                              **
     ***************************************************************************/
+   assign s_LOGISIM_NET_57 = 1'd0;
+
+   assign s_LOGISIM_NET_24 = 1'd0;
+
    assign s_LOGISIM_BUS_23[0] = 1'b0;
    assign s_LOGISIM_BUS_23[1] = 1'b0;
    assign s_LOGISIM_BUS_23[28] = 1'b0;
@@ -193,100 +201,60 @@ module MIPS_CPU( Go,
    assign s_LOGISIM_BUS_23[30] = 1'b0;
    assign s_LOGISIM_BUS_23[31] = 1'b0;
 
-   assign s_LOGISIM_NET_64 = 1'd0;
-
-   assign s_LOGISIM_NET_40 = 1'd1;
-
-   assign s_LOGISIM_BUS_68[31:0] = 32'd4;
+   assign s_LOGISIM_NET_21 = 1'd0;
 
    assign s_LOGISIM_NET_77 = 1'd0;
 
-   assign s_LOGISIM_NET_24 = 1'd0;
-
-   assign s_LOGISIM_NET_91 = 1'd0;
+   assign s_LOGISIM_NET_40 = 1'd1;
 
    assign s_LOGISIM_NET_28 = 1'd1;
 
-   assign s_LOGISIM_BUS_59[4:0] = 5'd2;
+   assign s_LOGISIM_BUS_48[4:0] = 5'd31;
+
+   assign s_LOGISIM_BUS_68[31:0] = 32'd4;
+
+   assign s_LOGISIM_NET_62 = 1'd1;
 
    assign s_LOGISIM_BUS_35[4:0] = 5'd2;
-
-   assign s_LOGISIM_BUS_60[31:0] = 32'd0;
 
    assign s_LOGISIM_BUS_47[4:0] = 5'd4;
 
    assign s_LOGISIM_BUS_61[31:0] = 32'd34;
 
-   assign s_LOGISIM_NET_57 = 1'd0;
-
-   assign s_LOGISIM_NET_62 = 1'd1;
-
-   assign s_LOGISIM_NET_21 = 1'd0;
+   assign s_LOGISIM_NET_64 = 1'd0;
 
    assign s_LOGISIM_NET_54 = 1'd0;
 
-   assign s_LOGISIM_BUS_48[4:0] = 5'd31;
+   assign s_LOGISIM_BUS_59[4:0] = 5'd2;
+
+   assign s_LOGISIM_NET_95 = 1'd0;
+
+   assign s_LOGISIM_BUS_60[31:0] = 32'd0;
 
 
    /***************************************************************************
     ** Here all normal components are defined                                **
     ***************************************************************************/
+   Bit_Extender_SIGN      BitExtender_1 (.imm_in(s_LOGISIM_BUS_11[15:0]),
+                                         .imm_out(s_LOGISIM_BUS_30[31:0]));
+
    Multiplexer_bus_2 #(.NrOfBits(32))
       MUX_1 (.Enable(1'b1),
-             .MuxIn_0(s_LOGISIM_BUS_34[31:0]),
-             .MuxIn_1(s_LOGISIM_BUS_30[31:0]),
-             .MuxOut(s_LOGISIM_BUS_16[31:0]),
-             .Sel(s_LOGISIM_NET_19));
-
-   Multiplexer_bus_2 #(.NrOfBits(32))
-      MUX_2 (.Enable(1'b1),
-             .MuxIn_0(s_LOGISIM_BUS_6[31:0]),
-             .MuxIn_1(s_LOGISIM_BUS_86[31:0]),
-             .MuxOut(s_LOGISIM_BUS_87[31:0]),
-             .Sel(s_LOGISIM_NET_79));
-
-   AND_GATE #(.BubblesMask(0))
-      GATE_1 (.Input_1(s_LOGISIM_NET_52),
-              .Input_2(s_LOGISIM_NET_66),
-              .Result(s_LOGISIM_NET_10));
+             .MuxIn_0(s_LOGISIM_BUS_78[31:0]),
+             .MuxIn_1(s_LOGISIM_BUS_5[31:0]),
+             .MuxOut(s_LOGISIM_BUS_12[31:0]),
+             .Sel(s_LOGISIM_NET_39));
 
    REGISTER_FLIP_FLOP #(.ActiveLevel(1),
-                        .NrOfBits(32))
+                        .NrOfBits(1))
       REGISTER_FILE_1 (.Clock(LOGISIM_CLOCK_TREE_0[4]),
-                       .ClockEnable(s_LOGISIM_NET_71),
-                       .D(s_LOGISIM_BUS_4[31:0]),
-                       .Q(s_LOGISIM_BUS_58[31:0]),
-                       .Reset(s_LOGISIM_NET_76),
+                       .ClockEnable(s_LOGISIM_NET_46),
+                       .D(s_LOGISIM_NET_14),
+                       .Q(s_LOGISIM_NET_70),
+                       .Reset(s_LOGISIM_NET_33),
                        .Tick(LOGISIM_CLOCK_TREE_0[2]),
-                       .cs(s_LOGISIM_NET_21),
-                       .pre(s_LOGISIM_NET_57));
-
-   Multiplexer_bus_2 #(.NrOfBits(32))
-      MUX_3 (.Enable(1'b1),
-             .MuxIn_0(s_LOGISIM_BUS_12[31:0]),
-             .MuxIn_1(s_LOGISIM_BUS_73[31:0]),
-             .MuxOut(s_LOGISIM_BUS_1[31:0]),
-             .Sel(s_LOGISIM_NET_74));
-
-   Adder #(.ExtendedBits(33),
-           .NrOfBits(32))
-      ADDER2C_1 (.CarryIn(1'b0),
-                 .CarryOut(),
-                 .DataA(s_LOGISIM_BUS_56[31:0]),
-                 .DataB(s_LOGISIM_BUS_68[31:0]),
-                 .Result(s_LOGISIM_BUS_5[31:0]));
-
-   Multiplexer_bus_2 #(.NrOfBits(32))
-      MUX_4 (.Enable(1'b1),
-             .MuxIn_0(s_LOGISIM_BUS_5[31:0]),
-             .MuxIn_1(s_LOGISIM_BUS_32[31:0]),
-             .MuxOut(s_LOGISIM_BUS_18[31:0]),
-             .Sel(s_LOGISIM_NET_83));
-
-   FPGADigit      FPGADigit_1 (.AN(s_LOGISIM_BUS_67[7:0]),
-                               .SEG(s_LOGISIM_BUS_43[7:0]),
-                               .clkx(LOGISIM_CLOCK_TREE_0[4]),
-                               .dig(s_LOGISIM_BUS_58[31:0]));
+                       .cs(s_LOGISIM_NET_24),
+                       .pre(s_LOGISIM_NET_95));
 
    REGISTER_FLIP_FLOP_PC #(.ActiveLevel(1),
                            .NrOfBits(32))
@@ -299,39 +267,97 @@ module MIPS_CPU( Go,
                        .cs(s_LOGISIM_NET_77),
                        .pre(s_LOGISIM_NET_54));
 
-   Shifter_32_bit #(.ShifterMode(0))
-      Shifter_1 (.DataA(s_LOGISIM_BUS_30[31:0]),
-                 .Result(s_LOGISIM_BUS_27[31:0]),
-                 .ShiftAmount(s_LOGISIM_BUS_59[4:0]));
+   Multiplexer_bus_2 #(.NrOfBits(32))
+      MUX_2 (.Enable(1'b1),
+             .MuxIn_0(s_LOGISIM_BUS_12[31:0]),
+             .MuxIn_1(s_LOGISIM_BUS_73[31:0]),
+             .MuxOut(s_LOGISIM_BUS_1[31:0]),
+             .Sel(s_LOGISIM_NET_74));
 
-   OR_GATE_3_INPUTS #(.BubblesMask(0))
-      GATE_2 (.Input_1(s_LOGISIM_NET_15),
-              .Input_2(s_LOGISIM_NET_10),
-              .Input_3(s_LOGISIM_NET_3),
-              .Result(s_LOGISIM_NET_83));
+   Multiplexer_bus_2 #(.NrOfBits(5))
+      MUX_3 (.Enable(1'b1),
+             .MuxIn_0(s_LOGISIM_BUS_69[4:0]),
+             .MuxIn_1(s_LOGISIM_BUS_48[4:0]),
+             .MuxOut(s_LOGISIM_BUS_72[4:0]),
+             .Sel(s_LOGISIM_NET_39));
+
+   RAM_RAM      RAM_1 (.addr(s_LOGISIM_BUS_90[11:2]),
+                       .clk(s_LOGISIM_NET_88),
+                       .d(s_LOGISIM_BUS_4[31:0]),
+                       .q(s_LOGISIM_BUS_36[31:0]),
+                       .we(s_LOGISIM_NET_38));
+
+   NOT_GATE      GATE_1 (.Input_1(s_LOGISIM_NET_52),
+                         .Result(s_LOGISIM_NET_22));
+
+   AND_GATE #(.BubblesMask(0))
+      GATE_2 (.Input_1(s_LOGISIM_NET_52),
+              .Input_2(s_LOGISIM_NET_66),
+              .Result(s_LOGISIM_NET_10));
 
    AND_GATE #(.BubblesMask(0))
       GATE_3 (.Input_1(s_LOGISIM_NET_80),
               .Input_2(s_LOGISIM_NET_45),
               .Result(s_LOGISIM_NET_15));
 
-   NOT_GATE      GATE_4 (.Input_1(s_LOGISIM_NET_52),
-                         .Result(s_LOGISIM_NET_22));
+   Multiplexer_bus_2 #(.NrOfBits(5))
+      MUX_4 (.Enable(1'b1),
+             .MuxIn_0(s_LOGISIM_BUS_11[25:21]),
+             .MuxIn_1(s_LOGISIM_BUS_35[4:0]),
+             .MuxOut(s_LOGISIM_BUS_31[4:0]),
+             .Sel(s_LOGISIM_NET_14));
+
+   Shifter_32_bit #(.ShifterMode(0))
+      Shifter_1 (.DataA(s_LOGISIM_BUS_30[31:0]),
+                 .Result(s_LOGISIM_BUS_27[31:0]),
+                 .ShiftAmount(s_LOGISIM_BUS_59[4:0]));
+
+   AND_GATE #(.BubblesMask(0))
+      GATE_4 (.Input_1(s_LOGISIM_NET_14),
+              .Input_2(s_LOGISIM_NET_85),
+              .Result(s_LOGISIM_NET_46));
+
+   Multiplexer_bus_2 #(.NrOfBits(5))
+      MUX_5 (.Enable(1'b1),
+             .MuxIn_0(s_LOGISIM_BUS_11[10:6]),
+             .MuxIn_1(s_LOGISIM_BUS_86[4:0]),
+             .MuxOut(s_LOGISIM_BUS_42[4:0]),
+             .Sel(s_LOGISIM_NET_84));
+
+   Multiplexer_bus_2 #(.NrOfBits(5))
+      MUX_6 (.Enable(1'b1),
+             .MuxIn_0(s_LOGISIM_BUS_11[20:16]),
+             .MuxIn_1(s_LOGISIM_BUS_11[15:11]),
+             .MuxOut(s_LOGISIM_BUS_69[4:0]),
+             .Sel(s_LOGISIM_NET_29));
+
+   Adder #(.ExtendedBits(33),
+           .NrOfBits(32))
+      ADDER2C_1 (.CarryIn(1'b0),
+                 .CarryOut(),
+                 .DataA(s_LOGISIM_BUS_56[31:0]),
+                 .DataB(s_LOGISIM_BUS_68[31:0]),
+                 .Result(s_LOGISIM_BUS_5[31:0]));
+
+   Multiplexer_bus_2 #(.NrOfBits(32))
+      MUX_7 (.Enable(1'b1),
+             .MuxIn_0(s_LOGISIM_BUS_5[31:0]),
+             .MuxIn_1(s_LOGISIM_BUS_32[31:0]),
+             .MuxOut(s_LOGISIM_BUS_18[31:0]),
+             .Sel(s_LOGISIM_NET_83));
+
+   Bit_Extender      BitExtender_2 (.imm_in(s_LOGISIM_BUS_11[15:0]),
+                                    .imm_out(s_LOGISIM_BUS_34[31:0]));
 
    NOT_GATE      GATE_5 (.Input_1(s_LOGISIM_NET_70),
                          .Result(s_LOGISIM_NET_17));
 
    Multiplexer_bus_2 #(.NrOfBits(32))
-      MUX_5 (.Enable(1'b1),
-             .MuxIn_0(s_LOGISIM_BUS_4[31:0]),
-             .MuxIn_1(s_LOGISIM_BUS_16[31:0]),
-             .MuxOut(s_LOGISIM_BUS_53[31:0]),
-             .Sel(s_LOGISIM_NET_82));
-
-   AND_GATE #(.BubblesMask(0))
-      GATE_6 (.Input_1(s_LOGISIM_NET_22),
-              .Input_2(s_LOGISIM_NET_81),
-              .Result(s_LOGISIM_NET_3));
+      MUX_8 (.Enable(1'b1),
+             .MuxIn_0(s_LOGISIM_BUS_18[31:0]),
+             .MuxIn_1(s_LOGISIM_BUS_23[31:0]),
+             .MuxOut(s_LOGISIM_BUS_6[31:0]),
+             .Sel(s_LOGISIM_NET_75));
 
    Comparator #(.NrOfBits(32),
                 .TwosComplement(1))
@@ -341,10 +367,29 @@ module MIPS_CPU( Go,
                     .DataA(s_LOGISIM_BUS_86[31:0]),
                     .DataB(s_LOGISIM_BUS_60[31:0]));
 
-   AND_GATE #(.BubblesMask(0))
-      GATE_7 (.Input_1(s_LOGISIM_NET_14),
-              .Input_2(s_LOGISIM_NET_85),
-              .Result(s_LOGISIM_NET_46));
+   REGISTER_FLIP_FLOP #(.ActiveLevel(1),
+                        .NrOfBits(32))
+      REGISTER_FILE_3 (.Clock(LOGISIM_CLOCK_TREE_0[4]),
+                       .ClockEnable(s_LOGISIM_NET_71),
+                       .D(s_LOGISIM_BUS_4[31:0]),
+                       .Q(s_LOGISIM_BUS_58[31:0]),
+                       .Reset(s_LOGISIM_NET_76),
+                       .Tick(LOGISIM_CLOCK_TREE_0[2]),
+                       .cs(s_LOGISIM_NET_21),
+                       .pre(s_LOGISIM_NET_57));
+
+   Bit_Extender_8_32_SIGN      BitExtender_3 (.imm_in(s_LOGISIM_BUS_13[7:0]),
+                                              .imm_out(s_LOGISIM_BUS_73[31:0]));
+
+   NOT_GATE      GATE_6 (.Input_1(s_LOGISIM_NET_49),
+                         .Result(s_LOGISIM_NET_85));
+
+   Multiplexer_bus_2 #(.NrOfBits(32))
+      MUX_9 (.Enable(1'b1),
+             .MuxIn_0(s_LOGISIM_BUS_4[31:0]),
+             .MuxIn_1(s_LOGISIM_BUS_16[31:0]),
+             .MuxOut(s_LOGISIM_BUS_53[31:0]),
+             .Sel(s_LOGISIM_NET_82));
 
    Comparator #(.NrOfBits(32),
                 .TwosComplement(1))
@@ -354,89 +399,26 @@ module MIPS_CPU( Go,
                     .DataA(s_LOGISIM_BUS_61[31:0]),
                     .DataB(s_LOGISIM_BUS_86[31:0]));
 
-   Bit_Extender_8_32_SIGN      BitExtender_1 (.imm_in(s_LOGISIM_BUS_13[7:0]),
-                                              .imm_out(s_LOGISIM_BUS_73[31:0]));
-
-   Multiplexer_bus_2 #(.NrOfBits(5))
-      MUX_6 (.Enable(1'b1),
-             .MuxIn_0(s_LOGISIM_BUS_11[10:6]),
-             .MuxIn_1(s_LOGISIM_BUS_86[4:0]),
-             .MuxOut(s_LOGISIM_BUS_42[4:0]),
-             .Sel(s_LOGISIM_NET_84));
-
-   AND_GATE #(.BubblesMask(0))
-      GATE_8 (.Input_1(s_LOGISIM_NET_14),
-              .Input_2(s_LOGISIM_NET_49),
-              .Result(s_LOGISIM_NET_71));
-
-   Adder #(.ExtendedBits(33),
-           .NrOfBits(32))
-      ADDER2C_2 (.CarryIn(s_LOGISIM_NET_64),
-                 .CarryOut(),
-                 .DataA(s_LOGISIM_BUS_27[31:0]),
-                 .DataB(s_LOGISIM_BUS_5[31:0]),
-                 .Result(s_LOGISIM_BUS_32[31:0]));
-
    Multiplexer_bus_2 #(.NrOfBits(32))
-      MUX_7 (.Enable(1'b1),
-             .MuxIn_0(s_LOGISIM_BUS_18[31:0]),
-             .MuxIn_1(s_LOGISIM_BUS_23[31:0]),
-             .MuxOut(s_LOGISIM_BUS_6[31:0]),
-             .Sel(s_LOGISIM_NET_75));
-
-   NOT_GATE      GATE_9 (.Input_1(s_LOGISIM_NET_49),
-                         .Result(s_LOGISIM_NET_85));
-
-   Multiplexer_bus_2 #(.NrOfBits(32))
-      MUX_8 (.Enable(1'b1),
-             .MuxIn_0(s_LOGISIM_BUS_78[31:0]),
-             .MuxIn_1(s_LOGISIM_BUS_5[31:0]),
-             .MuxOut(s_LOGISIM_BUS_12[31:0]),
-             .Sel(s_LOGISIM_NET_39));
-
-   Bit_Extender      BitExtender_2 (.imm_in(s_LOGISIM_BUS_11[15:0]),
-                                    .imm_out(s_LOGISIM_BUS_34[31:0]));
-
-   RAM_RAM      RAM_1 (.addr(s_LOGISIM_BUS_90[11:2]),
-                       .clk(s_LOGISIM_NET_88),
-                       .d(s_LOGISIM_BUS_4[31:0]),
-                       .q(s_LOGISIM_BUS_36[31:0]),
-                       .we(s_LOGISIM_NET_38));
-
-   Multiplexer_bus_2 #(.NrOfBits(5))
-      MUX_9 (.Enable(1'b1),
-             .MuxIn_0(s_LOGISIM_BUS_11[25:21]),
-             .MuxIn_1(s_LOGISIM_BUS_35[4:0]),
-             .MuxOut(s_LOGISIM_BUS_31[4:0]),
-             .Sel(s_LOGISIM_NET_14));
-
-   Multiplexer_bus_2 #(.NrOfBits(5))
       MUX_10 (.Enable(1'b1),
-              .MuxIn_0(s_LOGISIM_BUS_69[4:0]),
-              .MuxIn_1(s_LOGISIM_BUS_48[4:0]),
-              .MuxOut(s_LOGISIM_BUS_72[4:0]),
-              .Sel(s_LOGISIM_NET_39));
+              .MuxIn_0(s_LOGISIM_BUS_6[31:0]),
+              .MuxIn_1(s_LOGISIM_BUS_86[31:0]),
+              .MuxOut(s_LOGISIM_BUS_87[31:0]),
+              .Sel(s_LOGISIM_NET_79));
 
-   Multiplexer_bus_2 #(.NrOfBits(5))
+   FPGADigit      FPGADigit_1 (.AN(s_LOGISIM_BUS_67[7:0]),
+                               .SEG(s_LOGISIM_BUS_43[7:0]),
+                               .clkx(LOGISIM_CLOCK_TREE_0[4]),
+                               .dig(s_LOGISIM_BUS_58[31:0]));
+
+   Multiplexer_bus_4 #(.NrOfBits(8))
       MUX_11 (.Enable(1'b1),
-              .MuxIn_0(s_LOGISIM_BUS_11[20:16]),
-              .MuxIn_1(s_LOGISIM_BUS_11[15:11]),
-              .MuxOut(s_LOGISIM_BUS_69[4:0]),
-              .Sel(s_LOGISIM_NET_29));
-
-   REGISTER_FLIP_FLOP #(.ActiveLevel(1),
-                        .NrOfBits(1))
-      REGISTER_FILE_3 (.Clock(LOGISIM_CLOCK_TREE_0[4]),
-                       .ClockEnable(s_LOGISIM_NET_46),
-                       .D(s_LOGISIM_NET_14),
-                       .Q(s_LOGISIM_NET_70),
-                       .Reset(s_LOGISIM_NET_33),
-                       .Tick(LOGISIM_CLOCK_TREE_0[2]),
-                       .cs(s_LOGISIM_NET_24),
-                       .pre(s_LOGISIM_NET_91));
-
-   Bit_Extender_SIGN      BitExtender_3 (.imm_in(s_LOGISIM_BUS_11[15:0]),
-                                         .imm_out(s_LOGISIM_BUS_30[31:0]));
+              .MuxIn_0(s_LOGISIM_BUS_12[7:0]),
+              .MuxIn_1(s_LOGISIM_BUS_12[15:8]),
+              .MuxIn_2(s_LOGISIM_BUS_12[23:16]),
+              .MuxIn_3(s_LOGISIM_BUS_12[31:24]),
+              .MuxOut(s_LOGISIM_BUS_13[7:0]),
+              .Sel(s_LOGISIM_BUS_90[1:0]));
 
    ROM_ROM      ROM_1 (.Address(s_LOGISIM_BUS_56[11:2]),
                        .Data(s_LOGISIM_BUS_11[31:0]));
@@ -448,35 +430,48 @@ module MIPS_CPU( Go,
               .MuxOut(s_LOGISIM_BUS_78[31:0]),
               .Sel(s_LOGISIM_NET_50));
 
-   Multiplexer_bus_2 #(.NrOfBits(5))
+   Multiplexer_bus_2 #(.NrOfBits(32))
       MUX_13 (.Enable(1'b1),
+              .MuxIn_0(s_LOGISIM_BUS_34[31:0]),
+              .MuxIn_1(s_LOGISIM_BUS_30[31:0]),
+              .MuxOut(s_LOGISIM_BUS_16[31:0]),
+              .Sel(s_LOGISIM_NET_19));
+
+   AND_GATE #(.BubblesMask(0))
+      GATE_7 (.Input_1(s_LOGISIM_NET_14),
+              .Input_2(s_LOGISIM_NET_49),
+              .Result(s_LOGISIM_NET_71));
+
+   Adder #(.ExtendedBits(33),
+           .NrOfBits(32))
+      ADDER2C_2 (.CarryIn(s_LOGISIM_NET_64),
+                 .CarryOut(),
+                 .DataA(s_LOGISIM_BUS_27[31:0]),
+                 .DataB(s_LOGISIM_BUS_5[31:0]),
+                 .Result(s_LOGISIM_BUS_32[31:0]));
+
+   Multiplexer_bus_2 #(.NrOfBits(5))
+      MUX_14 (.Enable(1'b1),
               .MuxIn_0(s_LOGISIM_BUS_11[20:16]),
               .MuxIn_1(s_LOGISIM_BUS_47[4:0]),
               .MuxOut(s_LOGISIM_BUS_41[4:0]),
               .Sel(s_LOGISIM_NET_14));
 
-   Multiplexer_bus_4 #(.NrOfBits(8))
-      MUX_14 (.Enable(1'b1),
-              .MuxIn_0(s_LOGISIM_BUS_12[7:0]),
-              .MuxIn_1(s_LOGISIM_BUS_12[15:8]),
-              .MuxIn_2(s_LOGISIM_BUS_12[23:16]),
-              .MuxIn_3(s_LOGISIM_BUS_12[31:24]),
-              .MuxOut(s_LOGISIM_BUS_13[7:0]),
-              .Sel(s_LOGISIM_BUS_90[1:0]));
+   OR_GATE_3_INPUTS #(.BubblesMask(0))
+      GATE_8 (.Input_1(s_LOGISIM_NET_15),
+              .Input_2(s_LOGISIM_NET_10),
+              .Input_3(s_LOGISIM_NET_3),
+              .Result(s_LOGISIM_NET_83));
+
+   AND_GATE #(.BubblesMask(0))
+      GATE_9 (.Input_1(s_LOGISIM_NET_22),
+              .Input_2(s_LOGISIM_NET_81),
+              .Result(s_LOGISIM_NET_3));
 
 
    /***************************************************************************
     ** Here all sub-circuits are defined                                     **
     ***************************************************************************/
-   MIPS_ALU      MIPS_ALU_1 (.AluOP(s_LOGISIM_BUS_89[3:0]),
-                             .Equal(s_LOGISIM_NET_52),
-                             .LOGISIM_CLOCK_TREE_0(LOGISIM_CLOCK_TREE_0),
-                             .Result(s_LOGISIM_BUS_90[31:0]),
-                             .Result_2(),
-                             .X(s_LOGISIM_BUS_86[31:0]),
-                             .Y(s_LOGISIM_BUS_53[31:0]),
-                             .shamt(s_LOGISIM_BUS_42[4:0]));
-
    Control      Control_1 (.ALU_OP(s_LOGISIM_BUS_89[3:0]),
                            .ALU_SRC(s_LOGISIM_NET_82),
                            .BLTZ(s_LOGISIM_NET_80),
@@ -496,6 +491,15 @@ module MIPS_CPU( Go,
                            .SRAV(s_LOGISIM_NET_84),
                            .SignedExt(s_LOGISIM_NET_19),
                            .SysCALL(s_LOGISIM_NET_14));
+
+   MIPS_ALU      MIPS_ALU_1 (.AluOP(s_LOGISIM_BUS_89[3:0]),
+                             .Equal(s_LOGISIM_NET_52),
+                             .LOGISIM_CLOCK_TREE_0(LOGISIM_CLOCK_TREE_0),
+                             .Result(s_LOGISIM_BUS_90[31:0]),
+                             .Result_2(),
+                             .X(s_LOGISIM_BUS_86[31:0]),
+                             .Y(s_LOGISIM_BUS_53[31:0]),
+                             .shamt(s_LOGISIM_BUS_42[4:0]));
 
    MIPS_Regifile      MIPS_Regifile_1 (.Clk(s_LOGISIM_NET_88),
                                        .Din(s_LOGISIM_BUS_1[31:0]),

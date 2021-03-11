@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date             : Wed Mar 10 23:34:54 2021
+| Date             : Thu Mar 11 10:59:56 2021
 | Host             : DESKTOP-KP8EMEH running 64-bit major release  (build 9200)
 | Command          : report_power -file LogisimToplevelShell_power_routed.rpt -pb LogisimToplevelShell_power_summary_routed.pb -rpx LogisimToplevelShell_power_routed.rpx
 | Design           : LogisimToplevelShell
@@ -30,11 +30,11 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.122        |
+| Total On-Chip Power (W)  | 0.123        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.017        |
-| Device Static (W)        | 0.104        |
+| Dynamic (W)              | 0.026        |
+| Device Static (W)        | 0.097        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 84.4         |
 | Junction Temperature (C) | 25.6         |
@@ -53,18 +53,18 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.001 |        3 |       --- |             --- |
-| Slice Logic              |     0.003 |     1428 |       --- |             --- |
-|   LUT as Logic           |     0.002 |      877 |     63400 |            1.38 |
+| Slice Logic              |     0.003 |     1464 |       --- |             --- |
+|   LUT as Logic           |     0.003 |      982 |     63400 |            1.55 |
 |   LUT as Distributed RAM |    <0.001 |       58 |     19000 |            0.31 |
-|   CARRY4                 |    <0.001 |       52 |     15850 |            0.33 |
-|   Register               |    <0.001 |      137 |    126800 |            0.11 |
-|   F7/F8 Muxes            |    <0.001 |        9 |     63400 |            0.01 |
-|   Others                 |     0.000 |       16 |       --- |             --- |
+|   CARRY4                 |    <0.001 |       55 |     15850 |            0.35 |
+|   Register               |    <0.001 |      140 |    126800 |            0.11 |
+|   F7/F8 Muxes            |    <0.001 |       15 |     63400 |            0.02 |
+|   Others                 |     0.000 |       15 |       --- |             --- |
 |   BUFG                   |     0.000 |        1 |        32 |            3.13 |
-| Signals                  |     0.003 |     1209 |       --- |             --- |
-| I/O                      |     0.010 |       35 |       210 |           16.67 |
-| Static Power             |     0.104 |          |           |                 |
-| Total                    |     0.122 |          |           |                 |
+| Signals                  |     0.004 |     1247 |       --- |             --- |
+| I/O                      |     0.018 |       19 |       210 |            9.05 |
+| Static Power             |     0.097 |          |           |                 |
+| Total                    |     0.123 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,11 +74,11 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.022 |       0.007 |      0.015 |
+| Vccint    |       1.000 |     0.024 |       0.009 |      0.015 |
 | Vccaux    |       1.800 |     0.019 |       0.001 |      0.018 |
-| Vcco33    |       3.300 |     0.006 |       0.002 |      0.004 |
+| Vcco33    |       3.300 |     0.009 |       0.005 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
-| Vcco18    |       1.800 |     0.006 |       0.002 |      0.004 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
@@ -143,10 +143,10 @@ Table of Contents
 +----------------------+-----------+
 | Name                 | Power (W) |
 +----------------------+-----------+
-| LogisimToplevelShell |     0.017 |
-|   MIPS_CPU_0         |     0.006 |
+| LogisimToplevelShell |     0.026 |
+|   MIPS_CPU_0         |     0.008 |
 |     MIPS_Regifile_1  |     0.001 |
-|     REGISTER_FILE_2  |     0.003 |
+|     REGISTER_FILE_2  |     0.004 |
 +----------------------+-----------+
 
 

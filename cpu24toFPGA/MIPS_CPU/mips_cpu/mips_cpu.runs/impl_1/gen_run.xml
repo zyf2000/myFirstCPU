@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1615390395">
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1615431390">
   <File Type="BITSTR-BMM" Name="LogisimToplevelShell_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="LogisimToplevelShell_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="LogisimToplevelShell_timing_summary_init.rpt"/>
@@ -405,6 +405,14 @@
   </FileSet>
   <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
     <Filter Type="Utils"/>
+    <File Path="$PPRDIR/../name.tcl">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="UsedInSteps" Val="impl_1;WRITE_BITSTREAM;TCL.PRE"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
@@ -421,6 +429,6 @@
     <Step Id="phys_opt_design" EnableStepBool="1"/>
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
-    <Step Id="write_bitstream"/>
+    <Step Id="write_bitstream" PreStepTclHook="$PPRDIR/../name.tcl"/>
   </Strategy>
 </GenRun>
