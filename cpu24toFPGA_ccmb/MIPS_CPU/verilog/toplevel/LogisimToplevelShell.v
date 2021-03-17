@@ -10,7 +10,9 @@ module LogisimToplevelShell( FPGA_GlobalClock,
                              FPGA_INPUT_PIN_0,
                              FPGA_INPUT_PIN_1,
                              FPGA_OUTPUT_PIN_0,
-                             FPGA_OUTPUT_PIN_1);
+                             FPGA_OUTPUT_PIN_08,
+                             FPGA_OUTPUT_PIN_1,
+                             FPGA_OUTPUT_PIN_18);
 
    /***************************************************************************
     ** Here the inputs are defined                                           **
@@ -23,7 +25,9 @@ module LogisimToplevelShell( FPGA_GlobalClock,
     ** Here the outputs are defined                                          **
     ***************************************************************************/
    output[7:0] FPGA_OUTPUT_PIN_0;
+   output[7:0] FPGA_OUTPUT_PIN_08;
    output[7:0] FPGA_OUTPUT_PIN_1;
+   output[7:0] FPGA_OUTPUT_PIN_18;
 
    /***************************************************************************
     ** Here the internal wires are defined                                   **
@@ -39,10 +43,10 @@ module LogisimToplevelShell( FPGA_GlobalClock,
    /***************************************************************************
     ** Here all signal adaptations are performed                             **
     ***************************************************************************/
-   assign s_Go = FPGA_INPUT_PIN_1;
-   assign FPGA_OUTPUT_PIN_0 = s_NA;
-   assign FPGA_OUTPUT_PIN_1 = s_SEG;
-   assign s_RST = FPGA_INPUT_PIN_0;
+   assign s_Go = FPGA_INPUT_PIN_0;
+   assign FPGA_OUTPUT_PIN_0 = s_SEG;
+   assign FPGA_OUTPUT_PIN_1 = s_NA;
+   assign s_RST = FPGA_INPUT_PIN_1;
    /***************************************************************************
     ** Here all inlined adaptations are performed                            **
     ***************************************************************************/
@@ -50,7 +54,7 @@ module LogisimToplevelShell( FPGA_GlobalClock,
     ** Here the clock tree components are defined                            **
     ***************************************************************************/
    LogisimTickGenerator #(.NrOfBits(32),
-                          .ReloadValue(1500000))
+                          .ReloadValue(200000))
       LogisimTickGenerator_0 (.FPGAClock(FPGA_GlobalClock),
                               .FPGATick(s_FPGA_Tick));
 
@@ -65,7 +69,8 @@ module LogisimToplevelShell( FPGA_GlobalClock,
    /***************************************************************************
     ** Here the toplevel component is connected                              **
     ***************************************************************************/
-   MIPS_CPU      MIPS_CPU_0 (.Go(s_Go),
+   MIPS_CPU      MIPS_CPU_0 (.(s_),
+                             .Go(s_Go),
                              .LOGISIM_CLOCK_TREE_0(s_LOGISIM_CLOCK_TREE_0),
                              .NA(s_NA),
                              .RST(s_RST),

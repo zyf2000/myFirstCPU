@@ -46,7 +46,6 @@ module MIPS_ALU( AluOP,
 
    always @(*) begin
 		Equal = 1'b0;
-		Equal = (X==Y);
 	    case(AluOP)
 	        `OP_SLL: begin
 	            Result  = Y << shamt[4:0];
@@ -101,12 +100,12 @@ module MIPS_ALU( AluOP,
 	        `OP_SCMP: begin
 	        	Result  = ( (X<Y) & !(X[31] ^ Y[31]) ) | ( (X[31] ^ Y[31] ) & X[31] );
 	        	Result_2 = 0;
-				
+				Equal = (X==Y);
 	        end
 	        `OP_UCMP: begin
 	        	Result  = X < Y;
 	        	Result_2 = 0;
-				
+				Equal = (X==Y);
 	        end
 	        default: begin
 	        	Result  = 0;

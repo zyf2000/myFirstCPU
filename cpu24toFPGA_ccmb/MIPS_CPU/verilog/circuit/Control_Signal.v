@@ -336,155 +336,112 @@ module Control_Signal( F0,
    /***************************************************************************
     ** Here all input connections are defined                                **
     ***************************************************************************/
-   assign s_LOGISIM_NET_1                    = OP4;
-   assign s_LOGISIM_NET_29                   = F3;
    assign s_LOGISIM_NET_26                   = OP2;
-   assign s_LOGISIM_NET_9                    = F5;
-   assign s_LOGISIM_NET_94                   = F1;
-   assign s_LOGISIM_NET_12                   = F2;
-   assign s_LOGISIM_NET_139                  = F0;
-   assign s_LOGISIM_NET_8                    = OP5;
-   assign s_LOGISIM_NET_6                    = OP3;
    assign s_LOGISIM_NET_37                   = F4;
+   assign s_LOGISIM_NET_9                    = F5;
+   assign s_LOGISIM_NET_139                  = F0;
+   assign s_LOGISIM_NET_94                   = F1;
    assign s_LOGISIM_NET_7                    = OP0;
+   assign s_LOGISIM_NET_29                   = F3;
+   assign s_LOGISIM_NET_8                    = OP5;
    assign s_LOGISIM_NET_16                   = OP1;
+   assign s_LOGISIM_NET_6                    = OP3;
+   assign s_LOGISIM_NET_1                    = OP4;
+   assign s_LOGISIM_NET_12                   = F2;
 
    /***************************************************************************
     ** Here all output connections are defined                               **
     ***************************************************************************/
+   assign SignedExt                          = s_LOGISIM_NET_219;
+   assign MemToReg                           = s_LOGISIM_NET_249;
    assign SRAV                               = s_LOGISIM_NET_154;
-   assign BEQ                                = s_LOGISIM_NET_221;
-   assign MemWrite                           = s_LOGISIM_NET_248;
+   assign JUMP                               = s_LOGISIM_NET_243;
    assign JAL                                = s_LOGISIM_NET_256;
-   assign RegDst                             = s_LOGISIM_NET_244;
    assign ALU_SRC                            = s_LOGISIM_NET_217;
-   assign BNE                                = s_LOGISIM_NET_242;
    assign BLTZ                               = s_LOGISIM_NET_230;
    assign RegWrite                           = s_LOGISIM_NET_144;
-   assign SignedExt                          = s_LOGISIM_NET_219;
-   assign LB                                 = s_LOGISIM_NET_116;
-   assign MemToReg                           = s_LOGISIM_NET_249;
+   assign MemWrite                           = s_LOGISIM_NET_248;
+   assign RegDst                             = s_LOGISIM_NET_244;
    assign JR                                 = s_LOGISIM_NET_251;
-   assign JUMP                               = s_LOGISIM_NET_243;
+   assign BNE                                = s_LOGISIM_NET_242;
    assign SysCALL                            = s_LOGISIM_NET_185;
+   assign LB                                 = s_LOGISIM_NET_116;
+   assign BEQ                                = s_LOGISIM_NET_221;
 
    /***************************************************************************
     ** Here all normal components are defined                                **
     ***************************************************************************/
-   NOT_GATE      GATE_1 (.Input_1(s_LOGISIM_NET_29),
-                         .Result(s_LOGISIM_NET_76));
+   NOT_GATE      GATE_1 (.Input_1(s_LOGISIM_NET_6),
+                         .Result(s_LOGISIM_NET_63));
 
-   AND_GATE_6_INPUTS #(.BubblesMask(0))
-      GATE_2 (.Input_1(s_LOGISIM_NET_213),
-              .Input_2(s_LOGISIM_NET_22),
-              .Input_3(s_LOGISIM_NET_71),
-              .Input_4(s_LOGISIM_NET_120),
-              .Input_5(s_LOGISIM_NET_121),
-              .Input_6(s_LOGISIM_NET_8),
-              .Result(s_LOGISIM_NET_186));
+   NOT_GATE      GATE_2 (.Input_1(s_LOGISIM_NET_1),
+                         .Result(s_LOGISIM_NET_183));
 
-   NOT_GATE      GATE_3 (.Input_1(s_LOGISIM_NET_26),
-                         .Result(s_LOGISIM_NET_105));
+   NOT_GATE      GATE_3 (.Input_1(s_LOGISIM_NET_1),
+                         .Result(s_LOGISIM_NET_80));
 
-   NOT_GATE      GATE_4 (.Input_1(s_LOGISIM_NET_26),
-                         .Result(s_LOGISIM_NET_113));
+   NOT_GATE      GATE_4 (.Input_1(s_LOGISIM_NET_7),
+                         .Result(s_LOGISIM_NET_72));
 
-   NOT_GATE      GATE_5 (.Input_1(s_LOGISIM_NET_29),
-                         .Result(s_LOGISIM_NET_33));
+   NOT_GATE      GATE_5 (.Input_1(s_LOGISIM_NET_37),
+                         .Result(s_LOGISIM_NET_117));
 
-   NOT_GATE      GATE_6 (.Input_1(s_LOGISIM_NET_1),
-                         .Result(s_LOGISIM_NET_2));
+   NOT_GATE      GATE_6 (.Input_1(s_LOGISIM_NET_6),
+                         .Result(s_LOGISIM_NET_52));
 
-   NOT_GATE      GATE_7 (.Input_1(s_LOGISIM_NET_8),
-                         .Result(s_LOGISIM_NET_191));
+   NOT_GATE      GATE_7 (.Input_1(s_LOGISIM_NET_16),
+                         .Result(s_LOGISIM_NET_60));
 
-   NOT_GATE      GATE_8 (.Input_1(s_LOGISIM_NET_8),
-                         .Result(s_LOGISIM_NET_57));
+   NOT_GATE      GATE_8 (.Input_1(s_LOGISIM_NET_16),
+                         .Result(s_LOGISIM_NET_99));
 
    AND_GATE_5_INPUTS #(.BubblesMask(0))
-      GATE_9 (.Input_1(s_LOGISIM_NET_45),
-              .Input_2(s_LOGISIM_NET_181),
-              .Input_3(s_LOGISIM_NET_6),
-              .Input_4(s_LOGISIM_NET_131),
-              .Input_5(s_LOGISIM_NET_132),
-              .Result(s_LOGISIM_NET_200));
+      GATE_9 (.Input_1(s_LOGISIM_NET_16),
+              .Input_2(s_LOGISIM_NET_109),
+              .Input_3(s_LOGISIM_NET_231),
+              .Input_4(s_LOGISIM_NET_137),
+              .Input_5(s_LOGISIM_NET_57),
+              .Result(s_LOGISIM_NET_13));
 
-   AND_GATE_10_INPUTS #(.BubblesMask(0))
-      GATE_10 (.Input_1(s_LOGISIM_NET_182),
-               .Input_10(s_LOGISIM_NET_9),
-               .Input_2(s_LOGISIM_NET_203),
-               .Input_3(s_LOGISIM_NET_70),
-               .Input_4(s_LOGISIM_NET_223),
-               .Input_5(s_LOGISIM_NET_247),
-               .Input_6(s_LOGISIM_NET_191),
-               .Input_7(s_LOGISIM_NET_20),
-               .Input_8(s_LOGISIM_NET_133),
-               .Input_9(s_LOGISIM_NET_59),
-               .Result(s_LOGISIM_NET_179));
+   NOT_GATE      GATE_10 (.Input_1(s_LOGISIM_NET_26),
+                          .Result(s_LOGISIM_NET_28));
 
    NOT_GATE      GATE_11 (.Input_1(s_LOGISIM_NET_26),
-                          .Result(s_LOGISIM_NET_246));
+                          .Result(s_LOGISIM_NET_143));
 
    NOT_GATE      GATE_12 (.Input_1(s_LOGISIM_NET_1),
-                          .Result(s_LOGISIM_NET_69));
+                          .Result(s_LOGISIM_NET_2));
 
-   NOT_GATE      GATE_13 (.Input_1(s_LOGISIM_NET_29),
-                          .Result(s_LOGISIM_NET_173));
+   AND_GATE_10_INPUTS #(.BubblesMask(0))
+      GATE_13 (.Input_1(s_LOGISIM_NET_30),
+               .Input_10(s_LOGISIM_NET_9),
+               .Input_2(s_LOGISIM_NET_123),
+               .Input_3(s_LOGISIM_NET_201),
+               .Input_4(s_LOGISIM_NET_53),
+               .Input_5(s_LOGISIM_NET_129),
+               .Input_6(s_LOGISIM_NET_3),
+               .Input_7(s_LOGISIM_NET_12),
+               .Input_8(s_LOGISIM_NET_15),
+               .Input_9(s_LOGISIM_NET_25),
+               .Result(s_LOGISIM_NET_119));
 
-   NOT_GATE      GATE_14 (.Input_1(s_LOGISIM_NET_9),
+   NOT_GATE      GATE_14 (.Input_1(s_LOGISIM_NET_6),
+                          .Result(s_LOGISIM_NET_130));
+
+   NOT_GATE      GATE_15 (.Input_1(s_LOGISIM_NET_1),
+                          .Result(s_LOGISIM_NET_118));
+
+   NOT_GATE      GATE_16 (.Input_1(s_LOGISIM_NET_9),
                           .Result(s_LOGISIM_NET_184));
 
-   NOT_GATE      GATE_15 (.Input_1(s_LOGISIM_NET_8),
-                          .Result(s_LOGISIM_NET_136));
+   NOT_GATE      GATE_17 (.Input_1(s_LOGISIM_NET_6),
+                          .Result(s_LOGISIM_NET_79));
 
-   NOT_GATE      GATE_16 (.Input_1(s_LOGISIM_NET_29),
-                          .Result(s_LOGISIM_NET_96));
-
-   NOT_GATE      GATE_17 (.Input_1(s_LOGISIM_NET_26),
-                          .Result(s_LOGISIM_NET_134));
-
-   OR_GATE #(.BubblesMask(0))
-      GATE_18 (.Input_1(s_LOGISIM_NET_153),
-               .Input_2(s_LOGISIM_NET_13),
-               .Result(s_LOGISIM_NET_243));
-
-   NOT_GATE      GATE_19 (.Input_1(s_LOGISIM_NET_1),
-                          .Result(s_LOGISIM_NET_102));
-
-   NOT_GATE      GATE_20 (.Input_1(s_LOGISIM_NET_8),
-                          .Result(s_LOGISIM_NET_229));
-
-   NOT_GATE      GATE_21 (.Input_1(s_LOGISIM_NET_12),
-                          .Result(s_LOGISIM_NET_234));
-
-   NOT_GATE      GATE_22 (.Input_1(s_LOGISIM_NET_26),
-                          .Result(s_LOGISIM_NET_192));
-
-   NOT_GATE      GATE_23 (.Input_1(s_LOGISIM_NET_6),
-                          .Result(s_LOGISIM_NET_11));
-
-   NOT_GATE      GATE_24 (.Input_1(s_LOGISIM_NET_1),
-                          .Result(s_LOGISIM_NET_80));
-
-   NOT_GATE      GATE_25 (.Input_1(s_LOGISIM_NET_16),
-                          .Result(s_LOGISIM_NET_93));
-
-   NOT_GATE      GATE_26 (.Input_1(s_LOGISIM_NET_26),
-                          .Result(s_LOGISIM_NET_141));
-
-   NOT_GATE      GATE_27 (.Input_1(s_LOGISIM_NET_1),
-                          .Result(s_LOGISIM_NET_187));
-
-   OR_GATE_5_INPUTS #(.BubblesMask(0))
-      GATE_28 (.Input_1(s_LOGISIM_NET_114),
-               .Input_2(s_LOGISIM_NET_179),
-               .Input_3(s_LOGISIM_NET_119),
-               .Input_4(s_LOGISIM_NET_81),
-               .Input_5(s_LOGISIM_NET_206),
-               .Result(s_LOGISIM_NET_244));
+   NOT_GATE      GATE_18 (.Input_1(s_LOGISIM_NET_6),
+                          .Result(s_LOGISIM_NET_88));
 
    AND_GATE_12_INPUTS #(.BubblesMask(0))
-      GATE_29 (.Input_1(s_LOGISIM_NET_40),
+      GATE_19 (.Input_1(s_LOGISIM_NET_40),
                .Input_10(s_LOGISIM_NET_29),
                .Input_11(s_LOGISIM_NET_49),
                .Input_12(s_LOGISIM_NET_204),
@@ -498,80 +455,11 @@ module Control_Signal( F0,
                .Input_9(s_LOGISIM_NET_12),
                .Result(s_LOGISIM_NET_185));
 
-   NOT_GATE      GATE_30 (.Input_1(s_LOGISIM_NET_9),
-                          .Result(s_LOGISIM_NET_10));
-
-   NOT_GATE      GATE_31 (.Input_1(s_LOGISIM_NET_12),
-                          .Result(s_LOGISIM_NET_98));
-
-   NOT_GATE      GATE_32 (.Input_1(s_LOGISIM_NET_29),
-                          .Result(s_LOGISIM_NET_189));
+   NOT_GATE      GATE_20 (.Input_1(s_LOGISIM_NET_6),
+                          .Result(s_LOGISIM_NET_91));
 
    AND_GATE_6_INPUTS #(.BubblesMask(0))
-      GATE_33 (.Input_1(s_LOGISIM_NET_8),
-               .Input_2(s_LOGISIM_NET_102),
-               .Input_3(s_LOGISIM_NET_130),
-               .Input_4(s_LOGISIM_NET_58),
-               .Input_5(s_LOGISIM_NET_165),
-               .Input_6(s_LOGISIM_NET_164),
-               .Result(s_LOGISIM_NET_116));
-
-   NOT_GATE      GATE_34 (.Input_1(s_LOGISIM_NET_12),
-                          .Result(s_LOGISIM_NET_73));
-
-   NOT_GATE      GATE_35 (.Input_1(s_LOGISIM_NET_37),
-                          .Result(s_LOGISIM_NET_49));
-
-   NOT_GATE      GATE_36 (.Input_1(s_LOGISIM_NET_139),
-                          .Result(s_LOGISIM_NET_27));
-
-   NOT_GATE      GATE_37 (.Input_1(s_LOGISIM_NET_6),
-                          .Result(s_LOGISIM_NET_253));
-
-   NOT_GATE      GATE_38 (.Input_1(s_LOGISIM_NET_7),
-                          .Result(s_LOGISIM_NET_190));
-
-   NOT_GATE      GATE_39 (.Input_1(s_LOGISIM_NET_1),
-                          .Result(s_LOGISIM_NET_111));
-
-   NOT_GATE      GATE_40 (.Input_1(s_LOGISIM_NET_7),
-                          .Result(s_LOGISIM_NET_188));
-
-   AND_GATE_12_INPUTS #(.BubblesMask(0))
-      GATE_41 (.Input_1(s_LOGISIM_NET_188),
-               .Input_10(s_LOGISIM_NET_29),
-               .Input_11(s_LOGISIM_NET_4),
-               .Input_12(s_LOGISIM_NET_10),
-               .Input_2(s_LOGISIM_NET_0),
-               .Input_3(s_LOGISIM_NET_163),
-               .Input_4(s_LOGISIM_NET_196),
-               .Input_5(s_LOGISIM_NET_35),
-               .Input_6(s_LOGISIM_NET_166),
-               .Input_7(s_LOGISIM_NET_27),
-               .Input_8(s_LOGISIM_NET_180),
-               .Input_9(s_LOGISIM_NET_234),
-               .Result(s_LOGISIM_NET_251));
-
-   NOT_GATE      GATE_42 (.Input_1(s_LOGISIM_NET_6),
-                          .Result(s_LOGISIM_NET_120));
-
-   NOT_GATE      GATE_43 (.Input_1(s_LOGISIM_NET_7),
-                          .Result(s_LOGISIM_NET_107));
-
-   AND_GATE_6_INPUTS #(.BubblesMask(0))
-      GATE_44 (.Input_1(s_LOGISIM_NET_7),
-               .Input_2(s_LOGISIM_NET_44),
-               .Input_3(s_LOGISIM_NET_26),
-               .Input_4(s_LOGISIM_NET_88),
-               .Input_5(s_LOGISIM_NET_100),
-               .Input_6(s_LOGISIM_NET_128),
-               .Result(s_LOGISIM_NET_242));
-
-   NOT_GATE      GATE_45 (.Input_1(s_LOGISIM_NET_94),
-                          .Result(s_LOGISIM_NET_174));
-
-   AND_GATE_6_INPUTS #(.BubblesMask(0))
-      GATE_46 (.Input_1(s_LOGISIM_NET_7),
+      GATE_21 (.Input_1(s_LOGISIM_NET_7),
                .Input_2(s_LOGISIM_NET_16),
                .Input_3(s_LOGISIM_NET_32),
                .Input_4(s_LOGISIM_NET_87),
@@ -579,248 +467,438 @@ module Control_Signal( F0,
                .Input_6(s_LOGISIM_NET_97),
                .Result(s_LOGISIM_NET_256));
 
-   NOT_GATE      GATE_47 (.Input_1(s_LOGISIM_NET_26),
-                          .Result(s_LOGISIM_NET_28));
-
-   NOT_GATE      GATE_48 (.Input_1(s_LOGISIM_NET_1),
-                          .Result(s_LOGISIM_NET_100));
-
-   NOT_GATE      GATE_49 (.Input_1(s_LOGISIM_NET_8),
-                          .Result(s_LOGISIM_NET_233));
-
-   NOT_GATE      GATE_50 (.Input_1(s_LOGISIM_NET_7),
-                          .Result(s_LOGISIM_NET_48));
-
-   NOT_GATE      GATE_51 (.Input_1(s_LOGISIM_NET_7),
-                          .Result(s_LOGISIM_NET_175));
-
-   AND_GATE_10_INPUTS #(.BubblesMask(0))
-      GATE_52 (.Input_1(s_LOGISIM_NET_65),
-               .Input_10(s_LOGISIM_NET_9),
-               .Input_2(s_LOGISIM_NET_115),
-               .Input_3(s_LOGISIM_NET_17),
-               .Input_4(s_LOGISIM_NET_170),
-               .Input_5(s_LOGISIM_NET_215),
-               .Input_6(s_LOGISIM_NET_94),
-               .Input_7(s_LOGISIM_NET_73),
-               .Input_8(s_LOGISIM_NET_29),
-               .Input_9(s_LOGISIM_NET_176),
-               .Result(s_LOGISIM_NET_66));
-
-   NOT_GATE      GATE_53 (.Input_1(s_LOGISIM_NET_16),
-                          .Result(s_LOGISIM_NET_194));
-
-   NOT_GATE      GATE_54 (.Input_1(s_LOGISIM_NET_12),
-                          .Result(s_LOGISIM_NET_211));
-
-   NOT_GATE      GATE_55 (.Input_1(s_LOGISIM_NET_37),
-                          .Result(s_LOGISIM_NET_4));
-
-   AND_GATE_11_INPUTS #(.BubblesMask(0))
-      GATE_56 (.Input_1(s_LOGISIM_NET_47),
-               .Input_10(s_LOGISIM_NET_103),
-               .Input_11(s_LOGISIM_NET_108),
-               .Input_2(s_LOGISIM_NET_106),
-               .Input_3(s_LOGISIM_NET_149),
-               .Input_4(s_LOGISIM_NET_140),
-               .Input_5(s_LOGISIM_NET_84),
-               .Input_6(s_LOGISIM_NET_207),
-               .Input_7(s_LOGISIM_NET_31),
-               .Input_8(s_LOGISIM_NET_98),
-               .Input_9(s_LOGISIM_NET_29),
-               .Result(s_LOGISIM_NET_153));
-
-   NOT_GATE      GATE_57 (.Input_1(s_LOGISIM_NET_26),
-                          .Result(s_LOGISIM_NET_250));
-
-   NOT_GATE      GATE_58 (.Input_1(s_LOGISIM_NET_6),
-                          .Result(s_LOGISIM_NET_91));
-
-   NOT_GATE      GATE_59 (.Input_1(s_LOGISIM_NET_26),
-                          .Result(s_LOGISIM_NET_70));
+   NOT_GATE      GATE_22 (.Input_1(s_LOGISIM_NET_1),
+                          .Result(s_LOGISIM_NET_111));
 
    OR_GATE_4_INPUTS #(.BubblesMask(0))
-      GATE_60 (.Input_1(s_LOGISIM_NET_135),
+      GATE_23 (.Input_1(s_LOGISIM_NET_135),
                .Input_2(s_LOGISIM_NET_148),
                .Input_3(s_LOGISIM_NET_126),
                .Input_4(s_LOGISIM_NET_21),
                .Result(s_LOGISIM_NET_219));
 
-   NOT_GATE      GATE_61 (.Input_1(s_LOGISIM_NET_94),
-                          .Result(s_LOGISIM_NET_31));
+   NOT_GATE      GATE_24 (.Input_1(s_LOGISIM_NET_16),
+                          .Result(s_LOGISIM_NET_156));
 
-   NOT_GATE      GATE_62 (.Input_1(s_LOGISIM_NET_29),
+   NOT_GATE      GATE_25 (.Input_1(s_LOGISIM_NET_37),
+                          .Result(s_LOGISIM_NET_74));
+
+   NOT_GATE      GATE_26 (.Input_1(s_LOGISIM_NET_1),
+                          .Result(s_LOGISIM_NET_69));
+
+   NOT_GATE      GATE_27 (.Input_1(s_LOGISIM_NET_26),
+                          .Result(s_LOGISIM_NET_150));
+
+   NOT_GATE      GATE_28 (.Input_1(s_LOGISIM_NET_1),
+                          .Result(s_LOGISIM_NET_51));
+
+   NOT_GATE      GATE_29 (.Input_1(s_LOGISIM_NET_29),
                           .Result(s_LOGISIM_NET_133));
 
-   NOT_GATE      GATE_63 (.Input_1(s_LOGISIM_NET_16),
-                          .Result(s_LOGISIM_NET_44));
+   NOT_GATE      GATE_30 (.Input_1(s_LOGISIM_NET_16),
+                          .Result(s_LOGISIM_NET_220));
 
-   NOT_GATE      GATE_64 (.Input_1(s_LOGISIM_NET_26),
-                          .Result(s_LOGISIM_NET_109));
+   NOT_GATE      GATE_31 (.Input_1(s_LOGISIM_NET_16),
+                          .Result(s_LOGISIM_NET_41));
 
-   NOT_GATE      GATE_65 (.Input_1(s_LOGISIM_NET_1),
-                          .Result(s_LOGISIM_NET_228));
+   NOT_GATE      GATE_32 (.Input_1(s_LOGISIM_NET_6),
+                          .Result(s_LOGISIM_NET_170));
 
-   NOT_GATE      GATE_66 (.Input_1(s_LOGISIM_NET_139),
-                          .Result(s_LOGISIM_NET_167));
+   NOT_GATE      GATE_33 (.Input_1(s_LOGISIM_NET_8),
+                          .Result(s_LOGISIM_NET_24));
 
-   NOT_GATE      GATE_67 (.Input_1(s_LOGISIM_NET_26),
-                          .Result(s_LOGISIM_NET_181));
+   NOT_GATE      GATE_34 (.Input_1(s_LOGISIM_NET_9),
+                          .Result(s_LOGISIM_NET_85));
 
-   NOT_GATE      GATE_68 (.Input_1(s_LOGISIM_NET_1),
-                          .Result(s_LOGISIM_NET_215));
+   NOT_GATE      GATE_35 (.Input_1(s_LOGISIM_NET_1),
+                          .Result(s_LOGISIM_NET_187));
 
-   NOT_GATE      GATE_69 (.Input_1(s_LOGISIM_NET_7),
-                          .Result(s_LOGISIM_NET_30));
+   NOT_GATE      GATE_36 (.Input_1(s_LOGISIM_NET_16),
+                          .Result(s_LOGISIM_NET_203));
 
-   NOT_GATE      GATE_70 (.Input_1(s_LOGISIM_NET_6),
-                          .Result(s_LOGISIM_NET_87));
+   NOT_GATE      GATE_37 (.Input_1(s_LOGISIM_NET_9),
+                          .Result(s_LOGISIM_NET_151));
 
-   NOT_GATE      GATE_71 (.Input_1(s_LOGISIM_NET_16),
-                          .Result(s_LOGISIM_NET_138));
+   NOT_GATE      GATE_38 (.Input_1(s_LOGISIM_NET_37),
+                          .Result(s_LOGISIM_NET_43));
 
-   NOT_GATE      GATE_72 (.Input_1(s_LOGISIM_NET_1),
-                          .Result(s_LOGISIM_NET_235));
+   OR_GATE_5_INPUTS #(.BubblesMask(0))
+      GATE_39 (.Input_1(s_LOGISIM_NET_114),
+               .Input_2(s_LOGISIM_NET_179),
+               .Input_3(s_LOGISIM_NET_119),
+               .Input_4(s_LOGISIM_NET_81),
+               .Input_5(s_LOGISIM_NET_206),
+               .Result(s_LOGISIM_NET_244));
 
-   NOT_GATE      GATE_73 (.Input_1(s_LOGISIM_NET_29),
+   NOT_GATE      GATE_40 (.Input_1(s_LOGISIM_NET_16),
+                          .Result(s_LOGISIM_NET_165));
+
+   NOT_GATE      GATE_41 (.Input_1(s_LOGISIM_NET_29),
+                          .Result(s_LOGISIM_NET_76));
+
+   AND_GATE_6_INPUTS #(.BubblesMask(0))
+      GATE_42 (.Input_1(s_LOGISIM_NET_7),
+               .Input_2(s_LOGISIM_NET_44),
+               .Input_3(s_LOGISIM_NET_26),
+               .Input_4(s_LOGISIM_NET_88),
+               .Input_5(s_LOGISIM_NET_100),
+               .Input_6(s_LOGISIM_NET_128),
+               .Result(s_LOGISIM_NET_242));
+
+   NOT_GATE      GATE_43 (.Input_1(s_LOGISIM_NET_7),
+                          .Result(s_LOGISIM_NET_65));
+
+   NOT_GATE      GATE_44 (.Input_1(s_LOGISIM_NET_1),
+                          .Result(s_LOGISIM_NET_102));
+
+   NOT_GATE      GATE_45 (.Input_1(s_LOGISIM_NET_16),
+                          .Result(s_LOGISIM_NET_61));
+
+   AND_GATE_6_INPUTS #(.BubblesMask(0))
+      GATE_46 (.Input_1(s_LOGISIM_NET_213),
+               .Input_2(s_LOGISIM_NET_22),
+               .Input_3(s_LOGISIM_NET_71),
+               .Input_4(s_LOGISIM_NET_120),
+               .Input_5(s_LOGISIM_NET_121),
+               .Input_6(s_LOGISIM_NET_8),
+               .Result(s_LOGISIM_NET_186));
+
+   NOT_GATE      GATE_47 (.Input_1(s_LOGISIM_NET_29),
                           .Result(s_LOGISIM_NET_62));
 
-   NOT_GATE      GATE_74 (.Input_1(s_LOGISIM_NET_1),
-                          .Result(s_LOGISIM_NET_36));
+   AND_GATE_6_INPUTS #(.BubblesMask(0))
+      GATE_48 (.Input_1(s_LOGISIM_NET_8),
+               .Input_2(s_LOGISIM_NET_102),
+               .Input_3(s_LOGISIM_NET_130),
+               .Input_4(s_LOGISIM_NET_58),
+               .Input_5(s_LOGISIM_NET_165),
+               .Input_6(s_LOGISIM_NET_164),
+               .Result(s_LOGISIM_NET_116));
 
-   NOT_GATE      GATE_75 (.Input_1(s_LOGISIM_NET_37),
-                          .Result(s_LOGISIM_NET_75));
+   NOT_GATE      GATE_49 (.Input_1(s_LOGISIM_NET_16),
+                          .Result(s_LOGISIM_NET_0));
 
-   NOT_GATE      GATE_76 (.Input_1(s_LOGISIM_NET_8),
-                          .Result(s_LOGISIM_NET_82));
+   NOT_GATE      GATE_50 (.Input_1(s_LOGISIM_NET_37),
+                          .Result(s_LOGISIM_NET_25));
 
-   NOT_GATE      GATE_77 (.Input_1(s_LOGISIM_NET_1),
-                          .Result(s_LOGISIM_NET_92));
+   NOT_GATE      GATE_51 (.Input_1(s_LOGISIM_NET_6),
+                          .Result(s_LOGISIM_NET_42));
 
-   NOT_GATE      GATE_78 (.Input_1(s_LOGISIM_NET_7),
-                          .Result(s_LOGISIM_NET_72));
+   NOT_GATE      GATE_52 (.Input_1(s_LOGISIM_NET_1),
+                          .Result(s_LOGISIM_NET_215));
 
-   NOT_GATE      GATE_79 (.Input_1(s_LOGISIM_NET_7),
-                          .Result(s_LOGISIM_NET_225));
+   NOT_GATE      GATE_53 (.Input_1(s_LOGISIM_NET_7),
+                          .Result(s_LOGISIM_NET_164));
+
+   NOT_GATE      GATE_54 (.Input_1(s_LOGISIM_NET_8),
+                          .Result(s_LOGISIM_NET_57));
+
+   NOT_GATE      GATE_55 (.Input_1(s_LOGISIM_NET_7),
+                          .Result(s_LOGISIM_NET_45));
+
+   NOT_GATE      GATE_56 (.Input_1(s_LOGISIM_NET_8),
+                          .Result(s_LOGISIM_NET_232));
+
+   NOT_GATE      GATE_57 (.Input_1(s_LOGISIM_NET_6),
+                          .Result(s_LOGISIM_NET_253));
+
+   NOT_GATE      GATE_58 (.Input_1(s_LOGISIM_NET_1),
+                          .Result(s_LOGISIM_NET_121));
+
+   NOT_GATE      GATE_59 (.Input_1(s_LOGISIM_NET_7),
+                          .Result(s_LOGISIM_NET_40));
+
+   AND_GATE_6_INPUTS #(.BubblesMask(0))
+      GATE_60 (.Input_1(s_LOGISIM_NET_7),
+               .Input_2(s_LOGISIM_NET_16),
+               .Input_3(s_LOGISIM_NET_250),
+               .Input_4(s_LOGISIM_NET_6),
+               .Input_5(s_LOGISIM_NET_5),
+               .Input_6(s_LOGISIM_NET_8),
+               .Result(s_LOGISIM_NET_248));
+
+   AND_GATE_6_INPUTS #(.BubblesMask(0))
+      GATE_61 (.Input_1(s_LOGISIM_NET_147),
+               .Input_2(s_LOGISIM_NET_238),
+               .Input_3(s_LOGISIM_NET_246),
+               .Input_4(s_LOGISIM_NET_208),
+               .Input_5(s_LOGISIM_NET_157),
+               .Input_6(s_LOGISIM_NET_8),
+               .Result(s_LOGISIM_NET_89));
+
+   NOT_GATE      GATE_62 (.Input_1(s_LOGISIM_NET_16),
+                          .Result(s_LOGISIM_NET_171));
+
+   NOT_GATE      GATE_63 (.Input_1(s_LOGISIM_NET_8),
+                          .Result(s_LOGISIM_NET_84));
+
+   NOT_GATE      GATE_64 (.Input_1(s_LOGISIM_NET_26),
+                          .Result(s_LOGISIM_NET_106));
+
+   NOT_GATE      GATE_65 (.Input_1(s_LOGISIM_NET_16),
+                          .Result(s_LOGISIM_NET_194));
+
+   AND_GATE_5_INPUTS #(.BubblesMask(0))
+      GATE_66 (.Input_1(s_LOGISIM_NET_225),
+               .Input_2(s_LOGISIM_NET_56),
+               .Input_3(s_LOGISIM_NET_6),
+               .Input_4(s_LOGISIM_NET_187),
+               .Input_5(s_LOGISIM_NET_136),
+               .Result(s_LOGISIM_NET_158));
+
+   NOT_GATE      GATE_67 (.Input_1(s_LOGISIM_NET_8),
+                          .Result(s_LOGISIM_NET_245));
+
+   AND_GATE_11_INPUTS #(.BubblesMask(0))
+      GATE_68 (.Input_1(s_LOGISIM_NET_162),
+               .Input_10(s_LOGISIM_NET_43),
+               .Input_11(s_LOGISIM_NET_184),
+               .Input_2(s_LOGISIM_NET_93),
+               .Input_3(s_LOGISIM_NET_143),
+               .Input_4(s_LOGISIM_NET_145),
+               .Input_5(s_LOGISIM_NET_118),
+               .Input_6(s_LOGISIM_NET_254),
+               .Input_7(s_LOGISIM_NET_139),
+               .Input_8(s_LOGISIM_NET_94),
+               .Input_9(s_LOGISIM_NET_96),
+               .Result(s_LOGISIM_NET_206));
+
+   NOT_GATE      GATE_69 (.Input_1(s_LOGISIM_NET_7),
+                          .Result(s_LOGISIM_NET_147));
+
+   NOT_GATE      GATE_70 (.Input_1(s_LOGISIM_NET_26),
+                          .Result(s_LOGISIM_NET_252));
+
+   NOT_GATE      GATE_71 (.Input_1(s_LOGISIM_NET_9),
+                          .Result(s_LOGISIM_NET_108));
+
+   AND_GATE_9_INPUTS #(.BubblesMask(0))
+      GATE_72 (.Input_1(s_LOGISIM_NET_205),
+               .Input_2(s_LOGISIM_NET_220),
+               .Input_3(s_LOGISIM_NET_83),
+               .Input_4(s_LOGISIM_NET_199),
+               .Input_5(s_LOGISIM_NET_228),
+               .Input_6(s_LOGISIM_NET_12),
+               .Input_7(s_LOGISIM_NET_38),
+               .Input_8(s_LOGISIM_NET_155),
+               .Input_9(s_LOGISIM_NET_9),
+               .Result(s_LOGISIM_NET_178));
+
+   NOT_GATE      GATE_73 (.Input_1(s_LOGISIM_NET_1),
+                          .Result(s_LOGISIM_NET_77));
+
+   NOT_GATE      GATE_74 (.Input_1(s_LOGISIM_NET_9),
+                          .Result(s_LOGISIM_NET_10));
+
+   AND_GATE_4_INPUTS #(.BubblesMask(0))
+      GATE_75 (.Input_1(s_LOGISIM_NET_171),
+               .Input_2(s_LOGISIM_NET_6),
+               .Input_3(s_LOGISIM_NET_235),
+               .Input_4(s_LOGISIM_NET_229),
+               .Result(s_LOGISIM_NET_110));
+
+   AND_GATE_6_INPUTS #(.BubblesMask(0))
+      GATE_76 (.Input_1(s_LOGISIM_NET_190),
+               .Input_2(s_LOGISIM_NET_19),
+               .Input_3(s_LOGISIM_NET_252),
+               .Input_4(s_LOGISIM_NET_34),
+               .Input_5(s_LOGISIM_NET_36),
+               .Input_6(s_LOGISIM_NET_8),
+               .Result(s_LOGISIM_NET_135));
+
+   NOT_GATE      GATE_77 (.Input_1(s_LOGISIM_NET_8),
+                          .Result(s_LOGISIM_NET_136));
+
+   NOT_GATE      GATE_78 (.Input_1(s_LOGISIM_NET_12),
+                          .Result(s_LOGISIM_NET_73));
+
+   NOT_GATE      GATE_79 (.Input_1(s_LOGISIM_NET_139),
+                          .Result(s_LOGISIM_NET_27));
 
    NOT_GATE      GATE_80 (.Input_1(s_LOGISIM_NET_26),
-                          .Result(s_LOGISIM_NET_68));
+                          .Result(s_LOGISIM_NET_246));
 
    NOT_GATE      GATE_81 (.Input_1(s_LOGISIM_NET_6),
                           .Result(s_LOGISIM_NET_149));
 
-   NOT_GATE      GATE_82 (.Input_1(s_LOGISIM_NET_7),
-                          .Result(s_LOGISIM_NET_213));
+   NOT_GATE      GATE_82 (.Input_1(s_LOGISIM_NET_29),
+                          .Result(s_LOGISIM_NET_33));
 
-   NOT_GATE      GATE_83 (.Input_1(s_LOGISIM_NET_8),
-                          .Result(s_LOGISIM_NET_232));
+   NOT_GATE      GATE_83 (.Input_1(s_LOGISIM_NET_6),
+                          .Result(s_LOGISIM_NET_209));
 
-   NOT_GATE      GATE_84 (.Input_1(s_LOGISIM_NET_8),
-                          .Result(s_LOGISIM_NET_254));
+   NOT_GATE      GATE_84 (.Input_1(s_LOGISIM_NET_7),
+                          .Result(s_LOGISIM_NET_162));
 
-   NOT_GATE      GATE_85 (.Input_1(s_LOGISIM_NET_6),
-                          .Result(s_LOGISIM_NET_63));
+   NOT_GATE      GATE_85 (.Input_1(s_LOGISIM_NET_26),
+                          .Result(s_LOGISIM_NET_71));
 
-   AND_GATE_10_INPUTS #(.BubblesMask(0))
-      GATE_86 (.Input_1(s_LOGISIM_NET_86),
-               .Input_10(s_LOGISIM_NET_85),
-               .Input_2(s_LOGISIM_NET_156),
-               .Input_3(s_LOGISIM_NET_214),
-               .Input_4(s_LOGISIM_NET_63),
-               .Input_5(s_LOGISIM_NET_161),
-               .Input_6(s_LOGISIM_NET_139),
-               .Input_7(s_LOGISIM_NET_94),
-               .Input_8(s_LOGISIM_NET_76),
-               .Input_9(s_LOGISIM_NET_75),
-               .Result(s_LOGISIM_NET_222));
+   NOT_GATE      GATE_86 (.Input_1(s_LOGISIM_NET_7),
+                          .Result(s_LOGISIM_NET_239));
 
-   AND_GATE_10_INPUTS #(.BubblesMask(0))
-      GATE_87 (.Input_1(s_LOGISIM_NET_30),
-               .Input_10(s_LOGISIM_NET_9),
-               .Input_2(s_LOGISIM_NET_123),
-               .Input_3(s_LOGISIM_NET_201),
-               .Input_4(s_LOGISIM_NET_53),
-               .Input_5(s_LOGISIM_NET_129),
-               .Input_6(s_LOGISIM_NET_3),
-               .Input_7(s_LOGISIM_NET_12),
-               .Input_8(s_LOGISIM_NET_15),
-               .Input_9(s_LOGISIM_NET_25),
-               .Result(s_LOGISIM_NET_119));
+   NOT_GATE      GATE_87 (.Input_1(s_LOGISIM_NET_29),
+                          .Result(s_LOGISIM_NET_189));
 
-   NOT_GATE      GATE_88 (.Input_1(s_LOGISIM_NET_1),
-                          .Result(s_LOGISIM_NET_140));
+   NOT_GATE      GATE_88 (.Input_1(s_LOGISIM_NET_6),
+                          .Result(s_LOGISIM_NET_231));
 
-   NOT_GATE      GATE_89 (.Input_1(s_LOGISIM_NET_7),
-                          .Result(s_LOGISIM_NET_47));
+   NOT_GATE      GATE_89 (.Input_1(s_LOGISIM_NET_8),
+                          .Result(s_LOGISIM_NET_55));
 
    NOT_GATE      GATE_90 (.Input_1(s_LOGISIM_NET_16),
-                          .Result(s_LOGISIM_NET_168));
+                          .Result(s_LOGISIM_NET_212));
 
-   NOT_GATE      GATE_91 (.Input_1(s_LOGISIM_NET_6),
-                          .Result(s_LOGISIM_NET_42));
+   NOT_GATE      GATE_91 (.Input_1(s_LOGISIM_NET_139),
+                          .Result(s_LOGISIM_NET_207));
 
-   NOT_GATE      GATE_92 (.Input_1(s_LOGISIM_NET_139),
-                          .Result(s_LOGISIM_NET_125));
+   AND_GATE_12_INPUTS #(.BubblesMask(0))
+      GATE_92 (.Input_1(s_LOGISIM_NET_48),
+               .Input_10(s_LOGISIM_NET_33),
+               .Input_11(s_LOGISIM_NET_177),
+               .Input_12(s_LOGISIM_NET_151),
+               .Input_2(s_LOGISIM_NET_138),
+               .Input_3(s_LOGISIM_NET_113),
+               .Input_4(s_LOGISIM_NET_18),
+               .Input_5(s_LOGISIM_NET_169),
+               .Input_6(s_LOGISIM_NET_232),
+               .Input_7(s_LOGISIM_NET_139),
+               .Input_8(s_LOGISIM_NET_94),
+               .Input_9(s_LOGISIM_NET_12),
+               .Result(s_LOGISIM_NET_154));
 
-   NOT_GATE      GATE_93 (.Input_1(s_LOGISIM_NET_6),
-                          .Result(s_LOGISIM_NET_130));
+   NOT_GATE      GATE_93 (.Input_1(s_LOGISIM_NET_37),
+                          .Result(s_LOGISIM_NET_75));
 
    NOT_GATE      GATE_94 (.Input_1(s_LOGISIM_NET_26),
-                          .Result(s_LOGISIM_NET_150));
+                          .Result(s_LOGISIM_NET_39));
 
-   AND_GATE_5_INPUTS #(.BubblesMask(0))
-      GATE_95 (.Input_1(s_LOGISIM_NET_7),
-               .Input_2(s_LOGISIM_NET_16),
-               .Input_3(s_LOGISIM_NET_218),
-               .Input_4(s_LOGISIM_NET_80),
-               .Input_5(s_LOGISIM_NET_8),
-               .Result(s_LOGISIM_NET_21));
+   NOT_GATE      GATE_95 (.Input_1(s_LOGISIM_NET_26),
+                          .Result(s_LOGISIM_NET_113));
 
    NOT_GATE      GATE_96 (.Input_1(s_LOGISIM_NET_37),
-                          .Result(s_LOGISIM_NET_155));
+                          .Result(s_LOGISIM_NET_4));
 
-   NOT_GATE      GATE_97 (.Input_1(s_LOGISIM_NET_139),
-                          .Result(s_LOGISIM_NET_50));
+   NOT_GATE      GATE_97 (.Input_1(s_LOGISIM_NET_26),
+                          .Result(s_LOGISIM_NET_255));
 
-   NOT_GATE      GATE_98 (.Input_1(s_LOGISIM_NET_6),
-                          .Result(s_LOGISIM_NET_159));
+   NOT_GATE      GATE_98 (.Input_1(s_LOGISIM_NET_94),
+                          .Result(s_LOGISIM_NET_31));
 
-   NOT_GATE      GATE_99 (.Input_1(s_LOGISIM_NET_6),
-                          .Result(s_LOGISIM_NET_53));
+   NOT_GATE      GATE_99 (.Input_1(s_LOGISIM_NET_8),
+                          .Result(s_LOGISIM_NET_78));
 
-   NOT_GATE      GATE_100 (.Input_1(s_LOGISIM_NET_16),
-                           .Result(s_LOGISIM_NET_14));
+   NOT_GATE      GATE_100 (.Input_1(s_LOGISIM_NET_37),
+                           .Result(s_LOGISIM_NET_216));
 
-   NOT_GATE      GATE_101 (.Input_1(s_LOGISIM_NET_6),
-                           .Result(s_LOGISIM_NET_34));
+   NOT_GATE      GATE_101 (.Input_1(s_LOGISIM_NET_37),
+                           .Result(s_LOGISIM_NET_193));
 
-   NOT_GATE      GATE_102 (.Input_1(s_LOGISIM_NET_7),
-                           .Result(s_LOGISIM_NET_40));
+   NOT_GATE      GATE_102 (.Input_1(s_LOGISIM_NET_1),
+                           .Result(s_LOGISIM_NET_161));
 
-   AND_GATE_5_INPUTS #(.BubblesMask(0))
+   AND_GATE_6_INPUTS #(.BubblesMask(0))
       GATE_103 (.Input_1(s_LOGISIM_NET_7),
                 .Input_2(s_LOGISIM_NET_16),
-                .Input_3(s_LOGISIM_NET_141),
-                .Input_4(s_LOGISIM_NET_146),
-                .Input_5(s_LOGISIM_NET_8),
-                .Result(s_LOGISIM_NET_46));
+                .Input_3(s_LOGISIM_NET_28),
+                .Input_4(s_LOGISIM_NET_91),
+                .Input_5(s_LOGISIM_NET_95),
+                .Input_6(s_LOGISIM_NET_8),
+                .Result(s_LOGISIM_NET_64));
 
    NOT_GATE      GATE_104 (.Input_1(s_LOGISIM_NET_7),
-                           .Result(s_LOGISIM_NET_239));
+                           .Result(s_LOGISIM_NET_86));
+
+   AND_GATE_10_INPUTS #(.BubblesMask(0))
+      GATE_105 (.Input_1(s_LOGISIM_NET_65),
+                .Input_10(s_LOGISIM_NET_9),
+                .Input_2(s_LOGISIM_NET_115),
+                .Input_3(s_LOGISIM_NET_17),
+                .Input_4(s_LOGISIM_NET_170),
+                .Input_5(s_LOGISIM_NET_215),
+                .Input_6(s_LOGISIM_NET_94),
+                .Input_7(s_LOGISIM_NET_73),
+                .Input_8(s_LOGISIM_NET_29),
+                .Input_9(s_LOGISIM_NET_176),
+                .Result(s_LOGISIM_NET_66));
+
+   NOT_GATE      GATE_106 (.Input_1(s_LOGISIM_NET_1),
+                           .Result(s_LOGISIM_NET_235));
+
+   NOT_GATE      GATE_107 (.Input_1(s_LOGISIM_NET_7),
+                           .Result(s_LOGISIM_NET_190));
+
+   NOT_GATE      GATE_108 (.Input_1(s_LOGISIM_NET_6),
+                           .Result(s_LOGISIM_NET_195));
+
+   NOT_GATE      GATE_109 (.Input_1(s_LOGISIM_NET_26),
+                           .Result(s_LOGISIM_NET_134));
+
+   NOT_GATE      GATE_110 (.Input_1(s_LOGISIM_NET_1),
+                           .Result(s_LOGISIM_NET_92));
+
+   NOT_GATE      GATE_111 (.Input_1(s_LOGISIM_NET_9),
+                           .Result(s_LOGISIM_NET_204));
+
+   NOT_GATE      GATE_112 (.Input_1(s_LOGISIM_NET_94),
+                           .Result(s_LOGISIM_NET_180));
+
+   AND_GATE_9_INPUTS #(.BubblesMask(0))
+      GATE_113 (.Input_1(s_LOGISIM_NET_175),
+                .Input_2(s_LOGISIM_NET_202),
+                .Input_3(s_LOGISIM_NET_68),
+                .Input_4(s_LOGISIM_NET_159),
+                .Input_5(s_LOGISIM_NET_210),
+                .Input_6(s_LOGISIM_NET_50),
+                .Input_7(s_LOGISIM_NET_172),
+                .Input_8(s_LOGISIM_NET_173),
+                .Input_9(s_LOGISIM_NET_74),
+                .Result(s_LOGISIM_NET_197));
+
+   NOT_GATE      GATE_114 (.Input_1(s_LOGISIM_NET_7),
+                           .Result(s_LOGISIM_NET_30));
+
+   NOT_GATE      GATE_115 (.Input_1(s_LOGISIM_NET_6),
+                           .Result(s_LOGISIM_NET_87));
+
+   NOT_GATE      GATE_116 (.Input_1(s_LOGISIM_NET_6),
+                           .Result(s_LOGISIM_NET_53));
 
    OR_GATE #(.BubblesMask(0))
-      GATE_105 (.Input_1(s_LOGISIM_NET_160),
+      GATE_117 (.Input_1(s_LOGISIM_NET_160),
                 .Input_2(s_LOGISIM_NET_64),
                 .Result(s_LOGISIM_NET_249));
 
-   NOT_GATE      GATE_106 (.Input_1(s_LOGISIM_NET_16),
-                           .Result(s_LOGISIM_NET_60));
+   AND_GATE_5_INPUTS #(.BubblesMask(0))
+      GATE_118 (.Input_1(s_LOGISIM_NET_7),
+                .Input_2(s_LOGISIM_NET_16),
+                .Input_3(s_LOGISIM_NET_218),
+                .Input_4(s_LOGISIM_NET_80),
+                .Input_5(s_LOGISIM_NET_8),
+                .Result(s_LOGISIM_NET_21));
 
-   NOT_GATE      GATE_107 (.Input_1(s_LOGISIM_NET_8),
-                           .Result(s_LOGISIM_NET_84));
+   NOT_GATE      GATE_119 (.Input_1(s_LOGISIM_NET_26),
+                           .Result(s_LOGISIM_NET_109));
+
+   NOT_GATE      GATE_120 (.Input_1(s_LOGISIM_NET_1),
+                           .Result(s_LOGISIM_NET_127));
+
+   NOT_GATE      GATE_121 (.Input_1(s_LOGISIM_NET_12),
+                           .Result(s_LOGISIM_NET_234));
+
+   NOT_GATE      GATE_122 (.Input_1(s_LOGISIM_NET_12),
+                           .Result(s_LOGISIM_NET_98));
+
+   NOT_GATE      GATE_123 (.Input_1(s_LOGISIM_NET_29),
+                           .Result(s_LOGISIM_NET_38));
+
+   NOT_GATE      GATE_124 (.Input_1(s_LOGISIM_NET_26),
+                           .Result(s_LOGISIM_NET_32));
+
+   NOT_GATE      GATE_125 (.Input_1(s_LOGISIM_NET_6),
+                           .Result(s_LOGISIM_NET_196));
 
    AND_GATE_6_INPUTS #(.BubblesMask(0))
-      GATE_108 (.Input_1(s_LOGISIM_NET_7),
+      GATE_126 (.Input_1(s_LOGISIM_NET_7),
                 .Input_2(s_LOGISIM_NET_227),
                 .Input_3(s_LOGISIM_NET_236),
                 .Input_4(s_LOGISIM_NET_195),
@@ -828,29 +906,42 @@ module Control_Signal( F0,
                 .Input_6(s_LOGISIM_NET_82),
                 .Result(s_LOGISIM_NET_230));
 
-   NOT_GATE      GATE_109 (.Input_1(s_LOGISIM_NET_6),
-                           .Result(s_LOGISIM_NET_88));
+   AND_GATE_11_INPUTS #(.BubblesMask(0))
+      GATE_127 (.Input_1(s_LOGISIM_NET_47),
+                .Input_10(s_LOGISIM_NET_103),
+                .Input_11(s_LOGISIM_NET_108),
+                .Input_2(s_LOGISIM_NET_106),
+                .Input_3(s_LOGISIM_NET_149),
+                .Input_4(s_LOGISIM_NET_140),
+                .Input_5(s_LOGISIM_NET_84),
+                .Input_6(s_LOGISIM_NET_207),
+                .Input_7(s_LOGISIM_NET_31),
+                .Input_8(s_LOGISIM_NET_98),
+                .Input_9(s_LOGISIM_NET_29),
+                .Result(s_LOGISIM_NET_153));
 
-   NOT_GATE      GATE_110 (.Input_1(s_LOGISIM_NET_26),
-                           .Result(s_LOGISIM_NET_56));
+   AND_GATE_6_INPUTS #(.BubblesMask(0))
+      GATE_128 (.Input_1(s_LOGISIM_NET_67),
+                .Input_2(s_LOGISIM_NET_212),
+                .Input_3(s_LOGISIM_NET_26),
+                .Input_4(s_LOGISIM_NET_253),
+                .Input_5(s_LOGISIM_NET_111),
+                .Input_6(s_LOGISIM_NET_24),
+                .Result(s_LOGISIM_NET_221));
 
-   NOT_GATE      GATE_111 (.Input_1(s_LOGISIM_NET_26),
-                           .Result(s_LOGISIM_NET_32));
+   OR_GATE #(.BubblesMask(0))
+      GATE_129 (.Input_1(s_LOGISIM_NET_153),
+                .Input_2(s_LOGISIM_NET_13),
+                .Result(s_LOGISIM_NET_243));
 
-   NOT_GATE      GATE_112 (.Input_1(s_LOGISIM_NET_12),
-                           .Result(s_LOGISIM_NET_172));
+   NOT_GATE      GATE_130 (.Input_1(s_LOGISIM_NET_6),
+                           .Result(s_LOGISIM_NET_11));
 
-   NOT_GATE      GATE_113 (.Input_1(s_LOGISIM_NET_26),
-                           .Result(s_LOGISIM_NET_201));
-
-   NOT_GATE      GATE_114 (.Input_1(s_LOGISIM_NET_8),
-                           .Result(s_LOGISIM_NET_132));
-
-   NOT_GATE      GATE_115 (.Input_1(s_LOGISIM_NET_1),
-                           .Result(s_LOGISIM_NET_121));
+   NOT_GATE      GATE_131 (.Input_1(s_LOGISIM_NET_26),
+                           .Result(s_LOGISIM_NET_122));
 
    AND_GATE_9_INPUTS #(.BubblesMask(0))
-      GATE_116 (.Input_1(s_LOGISIM_NET_54),
+      GATE_132 (.Input_1(s_LOGISIM_NET_54),
                 .Input_2(s_LOGISIM_NET_41),
                 .Input_3(s_LOGISIM_NET_124),
                 .Input_4(s_LOGISIM_NET_209),
@@ -861,52 +952,332 @@ module Control_Signal( F0,
                 .Input_9(s_LOGISIM_NET_9),
                 .Result(s_LOGISIM_NET_237));
 
-   NOT_GATE      GATE_117 (.Input_1(s_LOGISIM_NET_16),
-                           .Result(s_LOGISIM_NET_99));
+   NOT_GATE      GATE_133 (.Input_1(s_LOGISIM_NET_26),
+                           .Result(s_LOGISIM_NET_83));
 
-   NOT_GATE      GATE_118 (.Input_1(s_LOGISIM_NET_7),
-                           .Result(s_LOGISIM_NET_86));
+   NOT_GATE      GATE_134 (.Input_1(s_LOGISIM_NET_139),
+                           .Result(s_LOGISIM_NET_50));
 
-   NOT_GATE      GATE_119 (.Input_1(s_LOGISIM_NET_9),
-                           .Result(s_LOGISIM_NET_108));
+   NOT_GATE      GATE_135 (.Input_1(s_LOGISIM_NET_16),
+                           .Result(s_LOGISIM_NET_22));
+
+   NOT_GATE      GATE_136 (.Input_1(s_LOGISIM_NET_26),
+                           .Result(s_LOGISIM_NET_236));
+
+   NOT_GATE      GATE_137 (.Input_1(s_LOGISIM_NET_37),
+                           .Result(s_LOGISIM_NET_49));
+
+   NOT_GATE      GATE_138 (.Input_1(s_LOGISIM_NET_16),
+                           .Result(s_LOGISIM_NET_19));
+
+   NOT_GATE      GATE_139 (.Input_1(s_LOGISIM_NET_26),
+                           .Result(s_LOGISIM_NET_250));
 
    AND_GATE_5_INPUTS #(.BubblesMask(0))
-      GATE_120 (.Input_1(s_LOGISIM_NET_14),
+      GATE_140 (.Input_1(s_LOGISIM_NET_239),
+                .Input_2(s_LOGISIM_NET_122),
+                .Input_3(s_LOGISIM_NET_6),
+                .Input_4(s_LOGISIM_NET_51),
+                .Input_5(s_LOGISIM_NET_55),
+                .Result(s_LOGISIM_NET_148));
+
+   NOT_GATE      GATE_141 (.Input_1(s_LOGISIM_NET_16),
+                           .Result(s_LOGISIM_NET_238));
+
+   NOT_GATE      GATE_142 (.Input_1(s_LOGISIM_NET_16),
+                           .Result(s_LOGISIM_NET_227));
+
+   NOT_GATE      GATE_143 (.Input_1(s_LOGISIM_NET_139),
+                           .Result(s_LOGISIM_NET_125));
+
+   NOT_GATE      GATE_144 (.Input_1(s_LOGISIM_NET_7),
+                           .Result(s_LOGISIM_NET_107));
+
+   NOT_GATE      GATE_145 (.Input_1(s_LOGISIM_NET_7),
+                           .Result(s_LOGISIM_NET_48));
+
+   NOT_GATE      GATE_146 (.Input_1(s_LOGISIM_NET_6),
+                           .Result(s_LOGISIM_NET_120));
+
+   AND_GATE_5_INPUTS #(.BubblesMask(0))
+      GATE_147 (.Input_1(s_LOGISIM_NET_7),
+                .Input_2(s_LOGISIM_NET_16),
+                .Input_3(s_LOGISIM_NET_255),
+                .Input_4(s_LOGISIM_NET_52),
+                .Input_5(s_LOGISIM_NET_69),
+                .Result(s_LOGISIM_NET_226));
+
+   NOT_GATE      GATE_148 (.Input_1(s_LOGISIM_NET_26),
+                           .Result(s_LOGISIM_NET_68));
+
+   AND_GATE_5_INPUTS #(.BubblesMask(0))
+      GATE_149 (.Input_1(s_LOGISIM_NET_45),
+                .Input_2(s_LOGISIM_NET_181),
+                .Input_3(s_LOGISIM_NET_6),
+                .Input_4(s_LOGISIM_NET_131),
+                .Input_5(s_LOGISIM_NET_132),
+                .Result(s_LOGISIM_NET_200));
+
+   NOT_GATE      GATE_150 (.Input_1(s_LOGISIM_NET_6),
+                           .Result(s_LOGISIM_NET_199));
+
+   NOT_GATE      GATE_151 (.Input_1(s_LOGISIM_NET_6),
+                           .Result(s_LOGISIM_NET_18));
+
+   NOT_GATE      GATE_152 (.Input_1(s_LOGISIM_NET_6),
+                           .Result(s_LOGISIM_NET_23));
+
+   NOT_GATE      GATE_153 (.Input_1(s_LOGISIM_NET_26),
+                           .Result(s_LOGISIM_NET_17));
+
+   NOT_GATE      GATE_154 (.Input_1(s_LOGISIM_NET_26),
+                           .Result(s_LOGISIM_NET_163));
+
+   NOT_GATE      GATE_155 (.Input_1(s_LOGISIM_NET_94),
+                           .Result(s_LOGISIM_NET_152));
+
+   NOT_GATE      GATE_156 (.Input_1(s_LOGISIM_NET_8),
+                           .Result(s_LOGISIM_NET_191));
+
+   NOT_GATE      GATE_157 (.Input_1(s_LOGISIM_NET_16),
+                           .Result(s_LOGISIM_NET_138));
+
+   NOT_GATE      GATE_158 (.Input_1(s_LOGISIM_NET_26),
+                           .Result(s_LOGISIM_NET_201));
+
+   NOT_GATE      GATE_159 (.Input_1(s_LOGISIM_NET_29),
+                           .Result(s_LOGISIM_NET_15));
+
+   NOT_GATE      GATE_160 (.Input_1(s_LOGISIM_NET_7),
+                           .Result(s_LOGISIM_NET_67));
+
+   NOT_GATE      GATE_161 (.Input_1(s_LOGISIM_NET_1),
+                           .Result(s_LOGISIM_NET_95));
+
+   NOT_GATE      GATE_162 (.Input_1(s_LOGISIM_NET_1),
+                           .Result(s_LOGISIM_NET_169));
+
+   NOT_GATE      GATE_163 (.Input_1(s_LOGISIM_NET_26),
+                           .Result(s_LOGISIM_NET_141));
+
+   NOT_GATE      GATE_164 (.Input_1(s_LOGISIM_NET_1),
+                           .Result(s_LOGISIM_NET_146));
+
+   AND_GATE_10_INPUTS #(.BubblesMask(0))
+      GATE_165 (.Input_1(s_LOGISIM_NET_107),
+                .Input_10(s_LOGISIM_NET_117),
+                .Input_2(s_LOGISIM_NET_99),
+                .Input_3(s_LOGISIM_NET_192),
+                .Input_4(s_LOGISIM_NET_11),
+                .Input_5(s_LOGISIM_NET_104),
+                .Input_6(s_LOGISIM_NET_233),
+                .Input_7(s_LOGISIM_NET_167),
+                .Input_8(s_LOGISIM_NET_211),
+                .Input_9(s_LOGISIM_NET_189),
+                .Result(s_LOGISIM_NET_114));
+
+   NOT_GATE      GATE_166 (.Input_1(s_LOGISIM_NET_8),
+                           .Result(s_LOGISIM_NET_128));
+
+   NOT_GATE      GATE_167 (.Input_1(s_LOGISIM_NET_7),
+                           .Result(s_LOGISIM_NET_47));
+
+   AND_GATE_5_INPUTS #(.BubblesMask(0))
+      GATE_168 (.Input_1(s_LOGISIM_NET_7),
+                .Input_2(s_LOGISIM_NET_16),
+                .Input_3(s_LOGISIM_NET_141),
+                .Input_4(s_LOGISIM_NET_146),
+                .Input_5(s_LOGISIM_NET_8),
+                .Result(s_LOGISIM_NET_46));
+
+   NOT_GATE      GATE_169 (.Input_1(s_LOGISIM_NET_16),
+                           .Result(s_LOGISIM_NET_202));
+
+   AND_GATE_12_INPUTS #(.BubblesMask(0))
+      GATE_170 (.Input_1(s_LOGISIM_NET_188),
+                .Input_10(s_LOGISIM_NET_29),
+                .Input_11(s_LOGISIM_NET_4),
+                .Input_12(s_LOGISIM_NET_10),
+                .Input_2(s_LOGISIM_NET_0),
+                .Input_3(s_LOGISIM_NET_163),
+                .Input_4(s_LOGISIM_NET_196),
+                .Input_5(s_LOGISIM_NET_35),
+                .Input_6(s_LOGISIM_NET_166),
+                .Input_7(s_LOGISIM_NET_27),
+                .Input_8(s_LOGISIM_NET_180),
+                .Input_9(s_LOGISIM_NET_234),
+                .Result(s_LOGISIM_NET_251));
+
+   NOT_GATE      GATE_171 (.Input_1(s_LOGISIM_NET_1),
+                           .Result(s_LOGISIM_NET_241));
+
+   NOT_GATE      GATE_172 (.Input_1(s_LOGISIM_NET_6),
+                           .Result(s_LOGISIM_NET_159));
+
+   NOT_GATE      GATE_173 (.Input_1(s_LOGISIM_NET_37),
+                           .Result(s_LOGISIM_NET_176));
+
+   NOT_GATE      GATE_174 (.Input_1(s_LOGISIM_NET_1),
+                           .Result(s_LOGISIM_NET_228));
+
+   NOT_GATE      GATE_175 (.Input_1(s_LOGISIM_NET_1),
+                           .Result(s_LOGISIM_NET_157));
+
+   NOT_GATE      GATE_176 (.Input_1(s_LOGISIM_NET_6),
+                           .Result(s_LOGISIM_NET_223));
+
+   NOT_GATE      GATE_177 (.Input_1(s_LOGISIM_NET_16),
+                           .Result(s_LOGISIM_NET_123));
+
+   NOT_GATE      GATE_178 (.Input_1(s_LOGISIM_NET_16),
+                           .Result(s_LOGISIM_NET_44));
+
+   NOT_GATE      GATE_179 (.Input_1(s_LOGISIM_NET_16),
+                           .Result(s_LOGISIM_NET_115));
+
+   NOT_GATE      GATE_180 (.Input_1(s_LOGISIM_NET_8),
+                           .Result(s_LOGISIM_NET_3));
+
+   NOT_GATE      GATE_181 (.Input_1(s_LOGISIM_NET_8),
+                           .Result(s_LOGISIM_NET_112));
+
+   NOT_GATE      GATE_182 (.Input_1(s_LOGISIM_NET_6),
+                           .Result(s_LOGISIM_NET_145));
+
+   NOT_GATE      GATE_183 (.Input_1(s_LOGISIM_NET_1),
+                           .Result(s_LOGISIM_NET_210));
+
+   NOT_GATE      GATE_184 (.Input_1(s_LOGISIM_NET_12),
+                           .Result(s_LOGISIM_NET_172));
+
+   NOT_GATE      GATE_185 (.Input_1(s_LOGISIM_NET_1),
+                           .Result(s_LOGISIM_NET_140));
+
+   NOT_GATE      GATE_186 (.Input_1(s_LOGISIM_NET_8),
+                           .Result(s_LOGISIM_NET_132));
+
+   NOT_GATE      GATE_187 (.Input_1(s_LOGISIM_NET_8),
+                           .Result(s_LOGISIM_NET_97));
+
+   NOT_GATE      GATE_188 (.Input_1(s_LOGISIM_NET_7),
+                           .Result(s_LOGISIM_NET_188));
+
+   NOT_GATE      GATE_189 (.Input_1(s_LOGISIM_NET_8),
+                           .Result(s_LOGISIM_NET_166));
+
+   NOT_GATE      GATE_190 (.Input_1(s_LOGISIM_NET_37),
+                           .Result(s_LOGISIM_NET_59));
+
+   NOT_GATE      GATE_191 (.Input_1(s_LOGISIM_NET_1),
+                           .Result(s_LOGISIM_NET_100));
+
+   NOT_GATE      GATE_192 (.Input_1(s_LOGISIM_NET_7),
+                           .Result(s_LOGISIM_NET_225));
+
+   NOT_GATE      GATE_193 (.Input_1(s_LOGISIM_NET_26),
+                           .Result(s_LOGISIM_NET_124));
+
+   NOT_GATE      GATE_194 (.Input_1(s_LOGISIM_NET_1),
+                           .Result(s_LOGISIM_NET_198));
+
+   NOT_GATE      GATE_195 (.Input_1(s_LOGISIM_NET_7),
+                           .Result(s_LOGISIM_NET_224));
+
+   NOT_GATE      GATE_196 (.Input_1(s_LOGISIM_NET_8),
+                           .Result(s_LOGISIM_NET_254));
+
+   NOT_GATE      GATE_197 (.Input_1(s_LOGISIM_NET_26),
+                           .Result(s_LOGISIM_NET_105));
+
+   NOT_GATE      GATE_198 (.Input_1(s_LOGISIM_NET_8),
+                           .Result(s_LOGISIM_NET_229));
+
+   NOT_GATE      GATE_199 (.Input_1(s_LOGISIM_NET_94),
+                           .Result(s_LOGISIM_NET_174));
+
+   NOT_GATE      GATE_200 (.Input_1(s_LOGISIM_NET_1),
+                           .Result(s_LOGISIM_NET_142));
+
+   NOT_GATE      GATE_201 (.Input_1(s_LOGISIM_NET_1),
+                           .Result(s_LOGISIM_NET_137));
+
+   NOT_GATE      GATE_202 (.Input_1(s_LOGISIM_NET_7),
+                           .Result(s_LOGISIM_NET_213));
+
+   NOT_GATE      GATE_203 (.Input_1(s_LOGISIM_NET_6),
+                           .Result(s_LOGISIM_NET_208));
+
+   NOT_GATE      GATE_204 (.Input_1(s_LOGISIM_NET_26),
+                           .Result(s_LOGISIM_NET_181));
+
+   NOT_GATE      GATE_205 (.Input_1(s_LOGISIM_NET_1),
+                           .Result(s_LOGISIM_NET_35));
+
+   NOT_GATE      GATE_206 (.Input_1(s_LOGISIM_NET_8),
+                           .Result(s_LOGISIM_NET_82));
+
+   AND_GATE_4_INPUTS #(.BubblesMask(0))
+      GATE_207 (.Input_1(s_LOGISIM_NET_61),
+                .Input_2(s_LOGISIM_NET_6),
+                .Input_3(s_LOGISIM_NET_2),
+                .Input_4(s_LOGISIM_NET_112),
+                .Result(s_LOGISIM_NET_101));
+
+   NOT_GATE      GATE_208 (.Input_1(s_LOGISIM_NET_37),
+                           .Result(s_LOGISIM_NET_177));
+
+   NOT_GATE      GATE_209 (.Input_1(s_LOGISIM_NET_1),
+                           .Result(s_LOGISIM_NET_36));
+
+   NOT_GATE      GATE_210 (.Input_1(s_LOGISIM_NET_26),
+                           .Result(s_LOGISIM_NET_192));
+
+   NOT_GATE      GATE_211 (.Input_1(s_LOGISIM_NET_29),
+                           .Result(s_LOGISIM_NET_96));
+
+   NOT_GATE      GATE_212 (.Input_1(s_LOGISIM_NET_8),
+                           .Result(s_LOGISIM_NET_240));
+
+   NOT_GATE      GATE_213 (.Input_1(s_LOGISIM_NET_8),
+                           .Result(s_LOGISIM_NET_233));
+
+   NOT_GATE      GATE_214 (.Input_1(s_LOGISIM_NET_12),
+                           .Result(s_LOGISIM_NET_211));
+
+   NOT_GATE      GATE_215 (.Input_1(s_LOGISIM_NET_29),
+                           .Result(s_LOGISIM_NET_173));
+
+   AND_GATE_6_INPUTS #(.BubblesMask(0))
+      GATE_216 (.Input_1(s_LOGISIM_NET_224),
+                .Input_2(s_LOGISIM_NET_60),
+                .Input_3(s_LOGISIM_NET_105),
+                .Input_4(s_LOGISIM_NET_23),
+                .Input_5(s_LOGISIM_NET_142),
+                .Input_6(s_LOGISIM_NET_8),
+                .Result(s_LOGISIM_NET_160));
+
+   NOT_GATE      GATE_217 (.Input_1(s_LOGISIM_NET_6),
+                           .Result(s_LOGISIM_NET_34));
+
+   AND_GATE_5_INPUTS #(.BubblesMask(0))
+      GATE_218 (.Input_1(s_LOGISIM_NET_14),
                 .Input_2(s_LOGISIM_NET_134),
                 .Input_3(s_LOGISIM_NET_6),
                 .Input_4(s_LOGISIM_NET_77),
                 .Input_5(s_LOGISIM_NET_78),
                 .Result(s_LOGISIM_NET_126));
 
-   NOT_GATE      GATE_121 (.Input_1(s_LOGISIM_NET_16),
-                           .Result(s_LOGISIM_NET_203));
+   NOT_GATE      GATE_219 (.Input_1(s_LOGISIM_NET_1),
+                           .Result(s_LOGISIM_NET_5));
 
-   NOT_GATE      GATE_122 (.Input_1(s_LOGISIM_NET_94),
+   NOT_GATE      GATE_220 (.Input_1(s_LOGISIM_NET_94),
                            .Result(s_LOGISIM_NET_20));
 
-   NOT_GATE      GATE_123 (.Input_1(s_LOGISIM_NET_1),
-                           .Result(s_LOGISIM_NET_169));
-
-   NOT_GATE      GATE_124 (.Input_1(s_LOGISIM_NET_16),
-                           .Result(s_LOGISIM_NET_19));
-
-   NOT_GATE      GATE_125 (.Input_1(s_LOGISIM_NET_7),
-                           .Result(s_LOGISIM_NET_147));
-
-   NOT_GATE      GATE_126 (.Input_1(s_LOGISIM_NET_9),
-                           .Result(s_LOGISIM_NET_204));
-
-   NOT_GATE      GATE_127 (.Input_1(s_LOGISIM_NET_26),
-                           .Result(s_LOGISIM_NET_17));
-
-   NOT_GATE      GATE_128 (.Input_1(s_LOGISIM_NET_7),
-                           .Result(s_LOGISIM_NET_164));
-
-   NOT_GATE      GATE_129 (.Input_1(s_LOGISIM_NET_1),
-                           .Result(s_LOGISIM_NET_104));
+   NOT_GATE      GATE_221 (.Input_1(s_LOGISIM_NET_26),
+                           .Result(s_LOGISIM_NET_70));
 
    AND_GATE_11_INPUTS #(.BubblesMask(0))
-      GATE_130 (.Input_1(s_LOGISIM_NET_72),
+      GATE_222 (.Input_1(s_LOGISIM_NET_72),
                 .Input_10(s_LOGISIM_NET_193),
                 .Input_11(s_LOGISIM_NET_9),
                 .Input_2(s_LOGISIM_NET_194),
@@ -919,137 +1290,74 @@ module Control_Signal( F0,
                 .Input_9(s_LOGISIM_NET_29),
                 .Result(s_LOGISIM_NET_81));
 
-   NOT_GATE      GATE_131 (.Input_1(s_LOGISIM_NET_9),
-                           .Result(s_LOGISIM_NET_85));
+   NOT_GATE      GATE_223 (.Input_1(s_LOGISIM_NET_7),
+                           .Result(s_LOGISIM_NET_205));
 
-   NOT_GATE      GATE_132 (.Input_1(s_LOGISIM_NET_8),
-                           .Result(s_LOGISIM_NET_55));
+   AND_GATE_10_INPUTS #(.BubblesMask(0))
+      GATE_224 (.Input_1(s_LOGISIM_NET_86),
+                .Input_10(s_LOGISIM_NET_85),
+                .Input_2(s_LOGISIM_NET_156),
+                .Input_3(s_LOGISIM_NET_214),
+                .Input_4(s_LOGISIM_NET_63),
+                .Input_5(s_LOGISIM_NET_161),
+                .Input_6(s_LOGISIM_NET_139),
+                .Input_7(s_LOGISIM_NET_94),
+                .Input_8(s_LOGISIM_NET_76),
+                .Input_9(s_LOGISIM_NET_75),
+                .Result(s_LOGISIM_NET_222));
 
-   NOT_GATE      GATE_133 (.Input_1(s_LOGISIM_NET_26),
-                           .Result(s_LOGISIM_NET_122));
+   NOT_GATE      GATE_225 (.Input_1(s_LOGISIM_NET_139),
+                           .Result(s_LOGISIM_NET_167));
 
-   AND_GATE_6_INPUTS #(.BubblesMask(0))
-      GATE_134 (.Input_1(s_LOGISIM_NET_7),
-                .Input_2(s_LOGISIM_NET_16),
-                .Input_3(s_LOGISIM_NET_250),
-                .Input_4(s_LOGISIM_NET_6),
-                .Input_5(s_LOGISIM_NET_5),
-                .Input_6(s_LOGISIM_NET_8),
-                .Result(s_LOGISIM_NET_248));
+   NOT_GATE      GATE_226 (.Input_1(s_LOGISIM_NET_1),
+                           .Result(s_LOGISIM_NET_104));
 
-   NOT_GATE      GATE_135 (.Input_1(s_LOGISIM_NET_8),
-                           .Result(s_LOGISIM_NET_97));
-
-   NOT_GATE      GATE_136 (.Input_1(s_LOGISIM_NET_37),
-                           .Result(s_LOGISIM_NET_176));
-
-   AND_GATE_6_INPUTS #(.BubblesMask(0))
-      GATE_137 (.Input_1(s_LOGISIM_NET_147),
-                .Input_2(s_LOGISIM_NET_238),
-                .Input_3(s_LOGISIM_NET_246),
-                .Input_4(s_LOGISIM_NET_208),
-                .Input_5(s_LOGISIM_NET_157),
-                .Input_6(s_LOGISIM_NET_8),
-                .Result(s_LOGISIM_NET_89));
-
-   NOT_GATE      GATE_138 (.Input_1(s_LOGISIM_NET_8),
-                           .Result(s_LOGISIM_NET_24));
-
-   NOT_GATE      GATE_139 (.Input_1(s_LOGISIM_NET_6),
-                           .Result(s_LOGISIM_NET_223));
-
-   NOT_GATE      GATE_140 (.Input_1(s_LOGISIM_NET_1),
-                           .Result(s_LOGISIM_NET_35));
-
-   NOT_GATE      GATE_141 (.Input_1(s_LOGISIM_NET_8),
-                           .Result(s_LOGISIM_NET_128));
-
-   NOT_GATE      GATE_142 (.Input_1(s_LOGISIM_NET_1),
-                           .Result(s_LOGISIM_NET_129));
-
-   NOT_GATE      GATE_143 (.Input_1(s_LOGISIM_NET_1),
-                           .Result(s_LOGISIM_NET_131));
-
-   NOT_GATE      GATE_144 (.Input_1(s_LOGISIM_NET_26),
-                           .Result(s_LOGISIM_NET_143));
-
-   NOT_GATE      GATE_145 (.Input_1(s_LOGISIM_NET_16),
-                           .Result(s_LOGISIM_NET_22));
-
-   NOT_GATE      GATE_146 (.Input_1(s_LOGISIM_NET_16),
-                           .Result(s_LOGISIM_NET_115));
-
-   AND_GATE_6_INPUTS #(.BubblesMask(0))
-      GATE_147 (.Input_1(s_LOGISIM_NET_224),
-                .Input_2(s_LOGISIM_NET_60),
-                .Input_3(s_LOGISIM_NET_105),
-                .Input_4(s_LOGISIM_NET_23),
-                .Input_5(s_LOGISIM_NET_142),
-                .Input_6(s_LOGISIM_NET_8),
-                .Result(s_LOGISIM_NET_160));
-
-   NOT_GATE      GATE_148 (.Input_1(s_LOGISIM_NET_1),
-                           .Result(s_LOGISIM_NET_5));
-
-   NOT_GATE      GATE_149 (.Input_1(s_LOGISIM_NET_37),
+   NOT_GATE      GATE_227 (.Input_1(s_LOGISIM_NET_37),
                            .Result(s_LOGISIM_NET_103));
 
-   NOT_GATE      GATE_150 (.Input_1(s_LOGISIM_NET_6),
-                           .Result(s_LOGISIM_NET_79));
+   NOT_GATE      GATE_228 (.Input_1(s_LOGISIM_NET_26),
+                           .Result(s_LOGISIM_NET_58));
 
-   NOT_GATE      GATE_151 (.Input_1(s_LOGISIM_NET_16),
-                           .Result(s_LOGISIM_NET_123));
+   NOT_GATE      GATE_229 (.Input_1(s_LOGISIM_NET_7),
+                           .Result(s_LOGISIM_NET_175));
 
-   NOT_GATE      GATE_152 (.Input_1(s_LOGISIM_NET_1),
-                           .Result(s_LOGISIM_NET_161));
+   NOT_GATE      GATE_230 (.Input_1(s_LOGISIM_NET_1),
+                           .Result(s_LOGISIM_NET_129));
 
-   NOT_GATE      GATE_153 (.Input_1(s_LOGISIM_NET_6),
-                           .Result(s_LOGISIM_NET_209));
+   AND_GATE_10_INPUTS #(.BubblesMask(0))
+      GATE_231 (.Input_1(s_LOGISIM_NET_182),
+                .Input_10(s_LOGISIM_NET_9),
+                .Input_2(s_LOGISIM_NET_203),
+                .Input_3(s_LOGISIM_NET_70),
+                .Input_4(s_LOGISIM_NET_223),
+                .Input_5(s_LOGISIM_NET_247),
+                .Input_6(s_LOGISIM_NET_191),
+                .Input_7(s_LOGISIM_NET_20),
+                .Input_8(s_LOGISIM_NET_133),
+                .Input_9(s_LOGISIM_NET_59),
+                .Result(s_LOGISIM_NET_179));
 
-   NOT_GATE      GATE_154 (.Input_1(s_LOGISIM_NET_9),
-                           .Result(s_LOGISIM_NET_151));
+   NOT_GATE      GATE_232 (.Input_1(s_LOGISIM_NET_16),
+                           .Result(s_LOGISIM_NET_168));
 
-   NOT_GATE      GATE_155 (.Input_1(s_LOGISIM_NET_7),
-                           .Result(s_LOGISIM_NET_45));
+   NOT_GATE      GATE_233 (.Input_1(s_LOGISIM_NET_1),
+                           .Result(s_LOGISIM_NET_247));
 
-   NOT_GATE      GATE_156 (.Input_1(s_LOGISIM_NET_8),
-                           .Result(s_LOGISIM_NET_166));
+   NOT_GATE      GATE_234 (.Input_1(s_LOGISIM_NET_7),
+                           .Result(s_LOGISIM_NET_54));
 
-   NOT_GATE      GATE_157 (.Input_1(s_LOGISIM_NET_6),
-                           .Result(s_LOGISIM_NET_208));
+   NOT_GATE      GATE_235 (.Input_1(s_LOGISIM_NET_37),
+                           .Result(s_LOGISIM_NET_155));
 
-   NOT_GATE      GATE_158 (.Input_1(s_LOGISIM_NET_16),
-                           .Result(s_LOGISIM_NET_165));
-
-   NOT_GATE      GATE_159 (.Input_1(s_LOGISIM_NET_8),
-                           .Result(s_LOGISIM_NET_3));
-
-   NOT_GATE      GATE_160 (.Input_1(s_LOGISIM_NET_26),
-                           .Result(s_LOGISIM_NET_106));
-
-   AND_GATE_4_INPUTS #(.BubblesMask(0))
-      GATE_161 (.Input_1(s_LOGISIM_NET_171),
-                .Input_2(s_LOGISIM_NET_6),
-                .Input_3(s_LOGISIM_NET_235),
-                .Input_4(s_LOGISIM_NET_229),
-                .Result(s_LOGISIM_NET_110));
-
-   NOT_GATE      GATE_162 (.Input_1(s_LOGISIM_NET_29),
-                           .Result(s_LOGISIM_NET_38));
-
-   NOT_GATE      GATE_163 (.Input_1(s_LOGISIM_NET_6),
-                           .Result(s_LOGISIM_NET_18));
-
-   AND_GATE_5_INPUTS #(.BubblesMask(0))
-      GATE_164 (.Input_1(s_LOGISIM_NET_7),
-                .Input_2(s_LOGISIM_NET_16),
-                .Input_3(s_LOGISIM_NET_255),
-                .Input_4(s_LOGISIM_NET_52),
-                .Input_5(s_LOGISIM_NET_69),
-                .Result(s_LOGISIM_NET_226));
+   OR_GATE_4_INPUTS #(.BubblesMask(0))
+      GATE_236 (.Input_1(s_LOGISIM_NET_186),
+                .Input_2(s_LOGISIM_NET_200),
+                .Input_3(s_LOGISIM_NET_101),
+                .Input_4(s_LOGISIM_NET_46),
+                .Result(s_LOGISIM_NET_217));
 
    OR_GATE_9_INPUTS #(.BubblesMask(0))
-      GATE_165 (.Input_1(s_LOGISIM_NET_197),
+      GATE_237 (.Input_1(s_LOGISIM_NET_197),
                 .Input_2(s_LOGISIM_NET_237),
                 .Input_3(s_LOGISIM_NET_178),
                 .Input_4(s_LOGISIM_NET_66),
@@ -1060,337 +1368,29 @@ module Control_Signal( F0,
                 .Input_9(s_LOGISIM_NET_226),
                 .Result(s_LOGISIM_NET_144));
 
-   NOT_GATE      GATE_166 (.Input_1(s_LOGISIM_NET_26),
-                           .Result(s_LOGISIM_NET_236));
+   NOT_GATE      GATE_238 (.Input_1(s_LOGISIM_NET_16),
+                           .Result(s_LOGISIM_NET_93));
 
-   NOT_GATE      GATE_167 (.Input_1(s_LOGISIM_NET_16),
-                           .Result(s_LOGISIM_NET_41));
-
-   NOT_GATE      GATE_168 (.Input_1(s_LOGISIM_NET_1),
-                           .Result(s_LOGISIM_NET_146));
-
-   AND_GATE_12_INPUTS #(.BubblesMask(0))
-      GATE_169 (.Input_1(s_LOGISIM_NET_48),
-                .Input_10(s_LOGISIM_NET_33),
-                .Input_11(s_LOGISIM_NET_177),
-                .Input_12(s_LOGISIM_NET_151),
-                .Input_2(s_LOGISIM_NET_138),
-                .Input_3(s_LOGISIM_NET_113),
-                .Input_4(s_LOGISIM_NET_18),
-                .Input_5(s_LOGISIM_NET_169),
-                .Input_6(s_LOGISIM_NET_232),
-                .Input_7(s_LOGISIM_NET_139),
-                .Input_8(s_LOGISIM_NET_94),
-                .Input_9(s_LOGISIM_NET_12),
-                .Result(s_LOGISIM_NET_154));
-
-   NOT_GATE      GATE_170 (.Input_1(s_LOGISIM_NET_6),
-                           .Result(s_LOGISIM_NET_23));
-
-   NOT_GATE      GATE_171 (.Input_1(s_LOGISIM_NET_1),
-                           .Result(s_LOGISIM_NET_247));
-
-   NOT_GATE      GATE_172 (.Input_1(s_LOGISIM_NET_1),
-                           .Result(s_LOGISIM_NET_183));
-
-   AND_GATE_9_INPUTS #(.BubblesMask(0))
-      GATE_173 (.Input_1(s_LOGISIM_NET_175),
-                .Input_2(s_LOGISIM_NET_202),
-                .Input_3(s_LOGISIM_NET_68),
-                .Input_4(s_LOGISIM_NET_159),
-                .Input_5(s_LOGISIM_NET_210),
-                .Input_6(s_LOGISIM_NET_50),
-                .Input_7(s_LOGISIM_NET_172),
-                .Input_8(s_LOGISIM_NET_173),
-                .Input_9(s_LOGISIM_NET_74),
-                .Result(s_LOGISIM_NET_197));
-
-   AND_GATE_5_INPUTS #(.BubblesMask(0))
-      GATE_174 (.Input_1(s_LOGISIM_NET_16),
-                .Input_2(s_LOGISIM_NET_109),
-                .Input_3(s_LOGISIM_NET_231),
-                .Input_4(s_LOGISIM_NET_137),
-                .Input_5(s_LOGISIM_NET_57),
-                .Result(s_LOGISIM_NET_13));
-
-   OR_GATE_4_INPUTS #(.BubblesMask(0))
-      GATE_175 (.Input_1(s_LOGISIM_NET_186),
-                .Input_2(s_LOGISIM_NET_200),
-                .Input_3(s_LOGISIM_NET_101),
-                .Input_4(s_LOGISIM_NET_46),
-                .Result(s_LOGISIM_NET_217));
-
-   NOT_GATE      GATE_176 (.Input_1(s_LOGISIM_NET_1),
-                           .Result(s_LOGISIM_NET_137));
-
-   AND_GATE_6_INPUTS #(.BubblesMask(0))
-      GATE_177 (.Input_1(s_LOGISIM_NET_67),
-                .Input_2(s_LOGISIM_NET_212),
-                .Input_3(s_LOGISIM_NET_26),
-                .Input_4(s_LOGISIM_NET_253),
-                .Input_5(s_LOGISIM_NET_111),
-                .Input_6(s_LOGISIM_NET_24),
-                .Result(s_LOGISIM_NET_221));
-
-   NOT_GATE      GATE_178 (.Input_1(s_LOGISIM_NET_94),
-                           .Result(s_LOGISIM_NET_180));
-
-   NOT_GATE      GATE_179 (.Input_1(s_LOGISIM_NET_16),
-                           .Result(s_LOGISIM_NET_202));
-
-   NOT_GATE      GATE_180 (.Input_1(s_LOGISIM_NET_7),
-                           .Result(s_LOGISIM_NET_67));
-
-   NOT_GATE      GATE_181 (.Input_1(s_LOGISIM_NET_26),
-                           .Result(s_LOGISIM_NET_252));
-
-   NOT_GATE      GATE_182 (.Input_1(s_LOGISIM_NET_8),
-                           .Result(s_LOGISIM_NET_78));
-
-   AND_GATE_5_INPUTS #(.BubblesMask(0))
-      GATE_183 (.Input_1(s_LOGISIM_NET_225),
-                .Input_2(s_LOGISIM_NET_56),
-                .Input_3(s_LOGISIM_NET_6),
-                .Input_4(s_LOGISIM_NET_187),
-                .Input_5(s_LOGISIM_NET_136),
-                .Result(s_LOGISIM_NET_158));
-
-   NOT_GATE      GATE_184 (.Input_1(s_LOGISIM_NET_26),
-                           .Result(s_LOGISIM_NET_255));
-
-   NOT_GATE      GATE_185 (.Input_1(s_LOGISIM_NET_7),
-                           .Result(s_LOGISIM_NET_54));
-
-   NOT_GATE      GATE_186 (.Input_1(s_LOGISIM_NET_16),
-                           .Result(s_LOGISIM_NET_212));
-
-   NOT_GATE      GATE_187 (.Input_1(s_LOGISIM_NET_16),
-                           .Result(s_LOGISIM_NET_171));
-
-   NOT_GATE      GATE_188 (.Input_1(s_LOGISIM_NET_1),
-                           .Result(s_LOGISIM_NET_77));
-
-   NOT_GATE      GATE_189 (.Input_1(s_LOGISIM_NET_37),
-                           .Result(s_LOGISIM_NET_74));
-
-   NOT_GATE      GATE_190 (.Input_1(s_LOGISIM_NET_16),
-                           .Result(s_LOGISIM_NET_156));
-
-   NOT_GATE      GATE_191 (.Input_1(s_LOGISIM_NET_16),
-                           .Result(s_LOGISIM_NET_238));
-
-   NOT_GATE      GATE_192 (.Input_1(s_LOGISIM_NET_8),
-                           .Result(s_LOGISIM_NET_112));
-
-   AND_GATE_10_INPUTS #(.BubblesMask(0))
-      GATE_193 (.Input_1(s_LOGISIM_NET_107),
-                .Input_10(s_LOGISIM_NET_117),
-                .Input_2(s_LOGISIM_NET_99),
-                .Input_3(s_LOGISIM_NET_192),
-                .Input_4(s_LOGISIM_NET_11),
-                .Input_5(s_LOGISIM_NET_104),
-                .Input_6(s_LOGISIM_NET_233),
-                .Input_7(s_LOGISIM_NET_167),
-                .Input_8(s_LOGISIM_NET_211),
-                .Input_9(s_LOGISIM_NET_189),
-                .Result(s_LOGISIM_NET_114));
-
-   NOT_GATE      GATE_194 (.Input_1(s_LOGISIM_NET_7),
-                           .Result(s_LOGISIM_NET_162));
-
-   NOT_GATE      GATE_195 (.Input_1(s_LOGISIM_NET_1),
-                           .Result(s_LOGISIM_NET_142));
-
-   NOT_GATE      GATE_196 (.Input_1(s_LOGISIM_NET_26),
-                           .Result(s_LOGISIM_NET_71));
-
-   NOT_GATE      GATE_197 (.Input_1(s_LOGISIM_NET_6),
-                           .Result(s_LOGISIM_NET_195));
-
-   NOT_GATE      GATE_198 (.Input_1(s_LOGISIM_NET_16),
-                           .Result(s_LOGISIM_NET_220));
-
-   NOT_GATE      GATE_199 (.Input_1(s_LOGISIM_NET_16),
-                           .Result(s_LOGISIM_NET_0));
-
-   NOT_GATE      GATE_200 (.Input_1(s_LOGISIM_NET_6),
-                           .Result(s_LOGISIM_NET_196));
-
-   NOT_GATE      GATE_201 (.Input_1(s_LOGISIM_NET_1),
-                           .Result(s_LOGISIM_NET_241));
-
-   NOT_GATE      GATE_202 (.Input_1(s_LOGISIM_NET_139),
-                           .Result(s_LOGISIM_NET_207));
-
-   NOT_GATE      GATE_203 (.Input_1(s_LOGISIM_NET_37),
-                           .Result(s_LOGISIM_NET_216));
-
-   NOT_GATE      GATE_204 (.Input_1(s_LOGISIM_NET_37),
-                           .Result(s_LOGISIM_NET_117));
-
-   NOT_GATE      GATE_205 (.Input_1(s_LOGISIM_NET_1),
-                           .Result(s_LOGISIM_NET_51));
-
-   NOT_GATE      GATE_206 (.Input_1(s_LOGISIM_NET_37),
-                           .Result(s_LOGISIM_NET_193));
-
-   NOT_GATE      GATE_207 (.Input_1(s_LOGISIM_NET_6),
-                           .Result(s_LOGISIM_NET_52));
-
-   NOT_GATE      GATE_208 (.Input_1(s_LOGISIM_NET_1),
-                           .Result(s_LOGISIM_NET_198));
-
-   NOT_GATE      GATE_209 (.Input_1(s_LOGISIM_NET_6),
-                           .Result(s_LOGISIM_NET_145));
-
-   NOT_GATE      GATE_210 (.Input_1(s_LOGISIM_NET_1),
-                           .Result(s_LOGISIM_NET_118));
-
-   AND_GATE_5_INPUTS #(.BubblesMask(0))
-      GATE_211 (.Input_1(s_LOGISIM_NET_239),
-                .Input_2(s_LOGISIM_NET_122),
-                .Input_3(s_LOGISIM_NET_6),
-                .Input_4(s_LOGISIM_NET_51),
-                .Input_5(s_LOGISIM_NET_55),
-                .Result(s_LOGISIM_NET_148));
-
-   NOT_GATE      GATE_212 (.Input_1(s_LOGISIM_NET_16),
-                           .Result(s_LOGISIM_NET_61));
-
-   AND_GATE_9_INPUTS #(.BubblesMask(0))
-      GATE_213 (.Input_1(s_LOGISIM_NET_205),
-                .Input_2(s_LOGISIM_NET_220),
-                .Input_3(s_LOGISIM_NET_83),
-                .Input_4(s_LOGISIM_NET_199),
-                .Input_5(s_LOGISIM_NET_228),
-                .Input_6(s_LOGISIM_NET_12),
-                .Input_7(s_LOGISIM_NET_38),
-                .Input_8(s_LOGISIM_NET_155),
-                .Input_9(s_LOGISIM_NET_9),
-                .Result(s_LOGISIM_NET_178));
-
-   NOT_GATE      GATE_214 (.Input_1(s_LOGISIM_NET_1),
-                           .Result(s_LOGISIM_NET_157));
-
-   NOT_GATE      GATE_215 (.Input_1(s_LOGISIM_NET_37),
-                           .Result(s_LOGISIM_NET_59));
-
-   NOT_GATE      GATE_216 (.Input_1(s_LOGISIM_NET_6),
-                           .Result(s_LOGISIM_NET_199));
-
-   NOT_GATE      GATE_217 (.Input_1(s_LOGISIM_NET_26),
-                           .Result(s_LOGISIM_NET_58));
-
-   NOT_GATE      GATE_218 (.Input_1(s_LOGISIM_NET_37),
-                           .Result(s_LOGISIM_NET_43));
-
-   NOT_GATE      GATE_219 (.Input_1(s_LOGISIM_NET_26),
-                           .Result(s_LOGISIM_NET_83));
-
-   NOT_GATE      GATE_220 (.Input_1(s_LOGISIM_NET_7),
-                           .Result(s_LOGISIM_NET_182));
-
-   AND_GATE_6_INPUTS #(.BubblesMask(0))
-      GATE_221 (.Input_1(s_LOGISIM_NET_7),
-                .Input_2(s_LOGISIM_NET_16),
-                .Input_3(s_LOGISIM_NET_28),
-                .Input_4(s_LOGISIM_NET_91),
-                .Input_5(s_LOGISIM_NET_95),
-                .Input_6(s_LOGISIM_NET_8),
-                .Result(s_LOGISIM_NET_64));
-
-   NOT_GATE      GATE_222 (.Input_1(s_LOGISIM_NET_12),
-                           .Result(s_LOGISIM_NET_90));
-
-   NOT_GATE      GATE_223 (.Input_1(s_LOGISIM_NET_8),
-                           .Result(s_LOGISIM_NET_245));
-
-   NOT_GATE      GATE_224 (.Input_1(s_LOGISIM_NET_7),
-                           .Result(s_LOGISIM_NET_224));
-
-   NOT_GATE      GATE_225 (.Input_1(s_LOGISIM_NET_1),
-                           .Result(s_LOGISIM_NET_95));
-
-   NOT_GATE      GATE_226 (.Input_1(s_LOGISIM_NET_26),
+   NOT_GATE      GATE_239 (.Input_1(s_LOGISIM_NET_26),
                            .Result(s_LOGISIM_NET_214));
 
-   NOT_GATE      GATE_227 (.Input_1(s_LOGISIM_NET_26),
-                           .Result(s_LOGISIM_NET_163));
-
-   NOT_GATE      GATE_228 (.Input_1(s_LOGISIM_NET_6),
-                           .Result(s_LOGISIM_NET_170));
-
-   NOT_GATE      GATE_229 (.Input_1(s_LOGISIM_NET_26),
-                           .Result(s_LOGISIM_NET_218));
-
-   NOT_GATE      GATE_230 (.Input_1(s_LOGISIM_NET_26),
-                           .Result(s_LOGISIM_NET_124));
-
-   NOT_GATE      GATE_231 (.Input_1(s_LOGISIM_NET_8),
-                           .Result(s_LOGISIM_NET_240));
-
-   NOT_GATE      GATE_232 (.Input_1(s_LOGISIM_NET_7),
-                           .Result(s_LOGISIM_NET_205));
-
-   NOT_GATE      GATE_233 (.Input_1(s_LOGISIM_NET_16),
-                           .Result(s_LOGISIM_NET_227));
-
-   NOT_GATE      GATE_234 (.Input_1(s_LOGISIM_NET_1),
-                           .Result(s_LOGISIM_NET_210));
-
-   NOT_GATE      GATE_235 (.Input_1(s_LOGISIM_NET_6),
-                           .Result(s_LOGISIM_NET_231));
-
-   NOT_GATE      GATE_236 (.Input_1(s_LOGISIM_NET_29),
-                           .Result(s_LOGISIM_NET_15));
-
-   NOT_GATE      GATE_237 (.Input_1(s_LOGISIM_NET_37),
-                           .Result(s_LOGISIM_NET_25));
-
-   NOT_GATE      GATE_238 (.Input_1(s_LOGISIM_NET_7),
-                           .Result(s_LOGISIM_NET_65));
-
-   AND_GATE_6_INPUTS #(.BubblesMask(0))
-      GATE_239 (.Input_1(s_LOGISIM_NET_190),
-                .Input_2(s_LOGISIM_NET_19),
-                .Input_3(s_LOGISIM_NET_252),
-                .Input_4(s_LOGISIM_NET_34),
-                .Input_5(s_LOGISIM_NET_36),
-                .Input_6(s_LOGISIM_NET_8),
-                .Result(s_LOGISIM_NET_135));
-
-   AND_GATE_11_INPUTS #(.BubblesMask(0))
-      GATE_240 (.Input_1(s_LOGISIM_NET_162),
-                .Input_10(s_LOGISIM_NET_43),
-                .Input_11(s_LOGISIM_NET_184),
-                .Input_2(s_LOGISIM_NET_93),
-                .Input_3(s_LOGISIM_NET_143),
-                .Input_4(s_LOGISIM_NET_145),
-                .Input_5(s_LOGISIM_NET_118),
-                .Input_6(s_LOGISIM_NET_254),
-                .Input_7(s_LOGISIM_NET_139),
-                .Input_8(s_LOGISIM_NET_94),
-                .Input_9(s_LOGISIM_NET_96),
-                .Result(s_LOGISIM_NET_206));
+   NOT_GATE      GATE_240 (.Input_1(s_LOGISIM_NET_12),
+                           .Result(s_LOGISIM_NET_90));
 
    NOT_GATE      GATE_241 (.Input_1(s_LOGISIM_NET_26),
-                           .Result(s_LOGISIM_NET_39));
+                           .Result(s_LOGISIM_NET_56));
 
-   NOT_GATE      GATE_242 (.Input_1(s_LOGISIM_NET_1),
-                           .Result(s_LOGISIM_NET_127));
+   NOT_GATE      GATE_242 (.Input_1(s_LOGISIM_NET_16),
+                           .Result(s_LOGISIM_NET_14));
 
-   AND_GATE_4_INPUTS #(.BubblesMask(0))
-      GATE_243 (.Input_1(s_LOGISIM_NET_61),
-                .Input_2(s_LOGISIM_NET_6),
-                .Input_3(s_LOGISIM_NET_2),
-                .Input_4(s_LOGISIM_NET_112),
-                .Result(s_LOGISIM_NET_101));
+   NOT_GATE      GATE_243 (.Input_1(s_LOGISIM_NET_26),
+                           .Result(s_LOGISIM_NET_218));
 
-   NOT_GATE      GATE_244 (.Input_1(s_LOGISIM_NET_94),
-                           .Result(s_LOGISIM_NET_152));
+   NOT_GATE      GATE_244 (.Input_1(s_LOGISIM_NET_7),
+                           .Result(s_LOGISIM_NET_182));
 
-   NOT_GATE      GATE_245 (.Input_1(s_LOGISIM_NET_37),
-                           .Result(s_LOGISIM_NET_177));
+   NOT_GATE      GATE_245 (.Input_1(s_LOGISIM_NET_1),
+                           .Result(s_LOGISIM_NET_131));
 
 
 

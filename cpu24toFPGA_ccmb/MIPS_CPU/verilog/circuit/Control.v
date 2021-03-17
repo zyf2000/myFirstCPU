@@ -85,22 +85,22 @@ module Control( Func,
    /***************************************************************************
     ** Here all output connections are defined                               **
     ***************************************************************************/
-   assign SysCALL                            = s_LOGISIM_NET_18;
-   assign RegWrite                           = s_LOGISIM_NET_39;
-   assign JR                                 = s_LOGISIM_NET_1;
    assign ALU_SRC                            = s_LOGISIM_NET_0;
-   assign ALU_OP                             = s_LOGISIM_BUS_37[3:0];
-   assign SRAV                               = s_LOGISIM_NET_35;
-   assign MemWrite                           = s_LOGISIM_NET_20;
-   assign Beq                                = s_LOGISIM_NET_36;
-   assign JAL                                = s_LOGISIM_NET_19;
    assign MemToReg                           = s_LOGISIM_NET_15;
-   assign Bne                                = s_LOGISIM_NET_44;
-   assign BLTZ                               = s_LOGISIM_NET_22;
-   assign LB                                 = s_LOGISIM_NET_43;
-   assign JMP                                = s_LOGISIM_NET_14;
    assign SignedExt                          = s_LOGISIM_NET_45;
    assign RegDst                             = s_LOGISIM_NET_21;
+   assign BLTZ                               = s_LOGISIM_NET_22;
+   assign RegWrite                           = s_LOGISIM_NET_39;
+   assign JR                                 = s_LOGISIM_NET_1;
+   assign JAL                                = s_LOGISIM_NET_19;
+   assign Bne                                = s_LOGISIM_NET_44;
+   assign SysCALL                            = s_LOGISIM_NET_18;
+   assign Beq                                = s_LOGISIM_NET_36;
+   assign LB                                 = s_LOGISIM_NET_43;
+   assign ALU_OP                             = s_LOGISIM_BUS_37[3:0];
+   assign SRAV                               = s_LOGISIM_NET_35;
+   assign JMP                                = s_LOGISIM_NET_14;
+   assign MemWrite                           = s_LOGISIM_NET_20;
 
    /***************************************************************************
     ** Here all sub-circuits are defined                                     **
